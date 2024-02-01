@@ -6,6 +6,11 @@ body{
     font-family: 'Gamja Flower', sans-serif;
 }
 
+.vide{
+    height: 100vh;
+    width: 100%;
+}
+
 .feur{
     align-items: center;
     
