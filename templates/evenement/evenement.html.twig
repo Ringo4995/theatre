@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}evenement dispo{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% for evenement in evenements %}
+    <div class="row mt-3 mb-4">
+                <div class="col-md-4 mobile">
+                    <img src="{{asset('/dossierIamge/' ~ evenement.image)}}" alt="{{ evenement.titre }}" class="img-fluid">
+                </div>
+        <div class="col-md-8">
+            <h1 class="mt-4 mt-md-0">{{ evenement.titre }}</h1>
+            <h2>{{ evenement.prix }} €</h2>
+            <hr>
+          
+              
+            
+           
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
