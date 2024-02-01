@@ -18,7 +18,7 @@ class EvenementType extends AbstractType
             ->add('description')
             ->add('prix')
             ->add('dateEvenement')
-            ->add('user')
+            // ->add('user')
         ;
     }
 
