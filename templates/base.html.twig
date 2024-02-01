@@ -36,11 +36,11 @@
 							<a class="nav-link" href="{{path('app_home')}}">Notre histoire</a>
 						</li>
 						{% if app.user %}
-                        <li class="nav-item">
-							<a class="nav-link" href="{{path('app_evenement_new')}}">Ajouter un evenement</a>
-						</li>
-                        {% endif %}
-						
+							<li class="nav-item">
+								<a class="nav-link" href="{{path('app_evenement_new')}}">Ajouter un evenement</a>
+							</li>
+						{% endif %}
+
 
 						<li class="nav-item"></li>
 						<li class="nav-item dropdown">
@@ -70,8 +70,10 @@
 				</div>
 			</div>
 		</nav>
-		<div class="vide"></div>
 
-		{% block body %}{% endblock %}
+
+		{% block body %}
+			<div class="vide"></div>
+		{% endblock %}
 	</body>
 </html>

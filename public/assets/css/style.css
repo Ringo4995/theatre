@@ -11,7 +11,7 @@ body{
     width: 100%;
 }
 
-.feur{
-    align-items: center;
-    
+.event{
+    display: flex;
+    justify-content: space-between;
 }
