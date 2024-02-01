@@ -14,7 +14,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
-
+		<script src="https://kit.fontawesome.com/b0cabbe554.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
@@ -26,29 +26,39 @@
 				<div class="collapse navbar-collapse" id="navbarColor01">
 					<ul class="navbar-nav me-auto">
 						<li class="nav-item">
-							<a class="nav-link active" href="{{path('app_home')}}">Accueil
+							<a class="nav-link active" href="{{path('app_home')}}"><i class="fa-solid fa-house"></i>Accueil
 								<span class="visually-hidden">(current)</span>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="{{path('app_home')}}">Evenements</a>
+							<a class="nav-link" href="{{path('app_home')}}"><i class="fa-solid fa-masks-theater"></i>Evenements</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="{{path('app_home')}}">Notre histoire</a>
+							<a class="nav-link" href="{{path('app_home')}}"><i class="fa-solid fa-landmark"></i>Notre histoire</a>
 						</li>
-						{% if app.user %}
+
+						
+
+						{# {% if app.user %}
 							<li class="nav-item">
 								<a class="nav-link" href="{{path('app_evenement_new')}}">Ajouter un evenement</a>
 							</li>
-						{% endif %}
+						{% endif %} #}
 
-
+							<li class="nav-item">
+								<a class="nav-link" href="{{path('app_contact')}}"><i class="fa-solid fa-users"></i>Nous Contactez</a>
+							</li>
 						<li class="nav-item"></li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon compte</a>
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa-regular fa-user"></i>Mon compte</a>
 							<div class="dropdown-menu">
 								{% if app.user %}
 									<a class="dropdown-item" href="#">Mon profil</a>
+									<a class="dropdown-item" href="{{path('app_evenement_new')}}">Ajouter un evenement</a>
+								
+									
+									<div class="dropdown-divider"></div>
+									
 									{% if is_granted('ROLE_ADMIN')  %}
 
 										<a class="dropdown-item" href="{{path('admin')}}">Administration</a>
@@ -67,6 +77,29 @@
 								{% endif %}
 							</div>
 						</li>
+
+
+
+						{# ////////////////////////////// #}
+						{# <li class="nav-item"></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								aria-expanded="false"><i class="fa-solid fa-masks-theater"></i>Evenements</a>
+							<div class="dropdown-menu">
+								{% if app.user %}
+								<a class="dropdown-item"href="{{path('app_evenement_new')}}">Ajouter un evenement</a>
+								<a class="dropdown-item" href="{{path('app_evenement_edit')}}">modifier un evenement</a>
+						
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="{{path('app_evenement_new')}}">supprimer un evenement</a>
+						
+						
+						
+								
+						
+								{% endif %}
+							</div>
+						</li> #}
 					</ul>
 				</div>
 			</div>
