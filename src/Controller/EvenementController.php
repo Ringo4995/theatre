@@ -6,11 +6,12 @@ use App\Entity\Evenement;
 use App\Form\EvenementType;
 use App\Repository\EvenementRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 #[Route('/evenement')]
 class EvenementController extends AbstractController
@@ -33,6 +34,26 @@ class EvenementController extends AbstractController
       
         if ($form->isSubmitted() && $form->isValid()) {
             $evenement->setUser($user);
+            // image
+            $imageFile = $form->get('image')->getData();
+            if ($imageFile) {
+                // $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
+                // dd($originalFilename);
+                // $safeFileName = $slugger->slug($originalFilename);
+                $newFilename = "event" . uniqid() . "." . $imageFile->guessExtension();
+
+                try {
+                    $imageFile->move($this->getParameter('dossierImage'), $newFilename);
+                } catch (FileException $e) {
+                    $e->getMessage();
+                }
+            }
+
+            $evenement->setImage($newFilename);
+            // 
+            if($evenement->isValidevenement() == null){
+                $evenement->setValidevenement(false);
+            }
             $entityManager->persist($evenement);
             $entityManager->flush();
 
