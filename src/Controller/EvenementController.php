@@ -24,14 +24,27 @@ class EvenementController extends AbstractController
         ]);
     }
 
+
+    #[Route('/afficheevent', name: 'affiche_event')]
+    public function afficheEvent(EvenementRepository $evenementRepository)
+    {
+        $evenements = $evenementRepository->findbyeventvalid(true);
+        // dd($evenements);
+        return $this->renderForm('evenement/evenement.html.twig', [
+            'evenements' => $evenements
+
+        ]);
+    }
+
+
     #[Route('/new', name: 'app_evenement_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager, UserInterface $user): Response
     {
-        
+
         $evenement = new Evenement();
         $form = $this->createForm(EvenementType::class, $evenement);
         $form->handleRequest($request);
-      
+
         if ($form->isSubmitted() && $form->isValid()) {
             $evenement->setUser($user);
             // image
@@ -51,7 +64,7 @@ class EvenementController extends AbstractController
 
             $evenement->setImage($newFilename);
             // 
-            if($evenement->isValidevenement() == null){
+            if ($evenement->isValidevenement() == null) {
                 $evenement->setValidevenement(false);
             }
             $entityManager->persist($evenement);
@@ -91,6 +104,7 @@ class EvenementController extends AbstractController
             'form' => $form,
         ]);
     }
+
 
     #[Route('/{id}', name: 'app_evenement_delete', methods: ['POST'])]
     public function delete(Request $request, Evenement $evenement, EntityManagerInterface $entityManager): Response
