@@ -5,12 +5,14 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+		
         
     </head>
     <body>
 		<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="{{path('app_home')}}">Theatre</a>
+				<a class="navbar-brand" href="{{path('app_home')}}">l'alchimiste</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -22,18 +24,18 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="{{path('app_jeux')}}">Pièce en cours</a>
+							<a class="nav-link" href="{{path('app_home')}}">Évenements</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="{{path('joueurs')}}">Inscription</a>
+							<a class="nav-link" href="{{path('app_home')}}">Notre histoire</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="{{path('afficherjoueur')}}">Joueurs</a>
+							<a class="nav-link" href="{{path('app_home')}}">Inscription</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plus</a>
 							<div class="dropdown-menu">
-								<a class="dropdown-item" href="{{path('ajoutjeux')}}">Ajouter des jeux</a>
+								<a class="dropdown-item" href="{{path('app_home')}}">Ajouter des jeux</a>
 								<a class="dropdown-item" href="#">Another action</a>
 								<a class="dropdown-item" href="#">Something else here</a>
 								<div class="dropdown-divider"></div>
