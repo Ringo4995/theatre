@@ -25,17 +25,6 @@ class EvenementController extends AbstractController
     }
 
 
-    #[Route('/afficheevent', name: 'affiche_event')]
-    public function afficheEvent(EvenementRepository $evenementRepository)
-    {
-        $evenements = $evenementRepository->findbyeventvalid(true);
-        // dd($evenements);
-        return $this->renderForm('evenement/evenement.html.twig', [
-            'evenements' => $evenements
-
-        ]);
-    }
-
 
     #[Route('/new', name: 'app_evenement_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager, UserInterface $user): Response

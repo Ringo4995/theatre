@@ -1,28 +1,35 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+const sliderImg = document.querySelector("#slider img");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+const urlImg = [
+    "../assets/img/morgane-bru-360final.jpg",
+    "../assets/img/morgane-bru-carca-copie.jpg",
+    "../assets/img/critaux.jpg"
+];
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// 1ere étape : je déclare un index
+let i = 0;
+sliderImg.src = urlImg[i];
+// * CREATION DU STYLE EN JS CAR IL PREND LE DESSUS SUR LE CSS **
+sliderImg.style.width = "100%";
+sliderImg.style.height = "auto";
+sliderImg.style.objectFit = "cover";
+sliderImg.style.objectPosition = "0px -300px";
+sliderImg.style.zIndex  = "0";
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+
+
+setInterval(
+    function () {
+        if (i === urlImg.length - 1) {
+            i = 0;
+
+            sliderImg.src = urlImg[i];
+        } else {
+            i++;
+            sliderImg.src = urlImg[i];
+        }
+    },
+    4000
+)
