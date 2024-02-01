@@ -6,6 +6,8 @@ use App\Entity\Evenement;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 
 class EvenementType extends AbstractType
 {
@@ -13,10 +15,19 @@ class EvenementType extends AbstractType
     {
         $builder
             ->add('titre')
-            ->add('image')
+            ->add('image', FileType::class, [
+                "data_class" => null
+                // 'attr' => [
+                //     'accept' => "image/*"
+                // ],
+                // 'constraints' => [
+                //     new Image()
+                // ]
+            ])
+            // ->add('image')
             ->add('lieu')
             ->add('description')
-            ->add('prix')
+            ->add('prix', NumberType::class)
             ->add('dateEvenement')
             // ->add('user')
         ;
