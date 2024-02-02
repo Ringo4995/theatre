@@ -5,28 +5,29 @@
 
 
 {% block body %}
-	<h1 class="acroche">
-		Le monde entier est un theatre, Et tous,<br>
-		hommes et femmes, n'en sont que les acteurs.
-		<br>Et notre vie durant
-									nous jouons
-									plusieurs roles.
-	</h1>
-	<div class="opac"></div>
-	<div class="carousel slide" id="myCarousel" data-bs-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="{{ asset('dossierIamge/danceur.jpg') }}" class="d-block w-100 taille" alt="Slide 1">
-			</div>
-			<div class="carousel-item">
-				<img src="{{ asset('dossierIamge/figure.jpg') }}" class="d-block w-100 taille" alt="Slide 2">
-			</div>
-			<div class="carousel-item">
-				<img src="{{ asset('dossierIamge/dance.jpg') }}" class="d-block w-100 taille" alt="Slide 3">
+
+	<div class="opac">
+		<div class="carousel slide" id="myCarousel" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="{{ asset('dossierIamge/danceur.jpg') }}" class="d-block w-100 taille" alt="Slide 1">
+				</div>
+				<div class="carousel-item">
+					<img src="{{ asset('dossierIamge/figure.jpg') }}" class="d-block w-100 taille" alt="Slide 2">
+				</div>
+				<div class="carousel-item">
+					<img src="{{ asset('dossierIamge/dance.jpg') }}" class="d-block w-100 taille" alt="Slide 3">
+				</div>
 			</div>
 		</div>
+		<h1 class="acroche">
+			Le monde entier est un théâtre, Et tous,<br>
+			hommes et femmes, n'en sont que les acteurs.
+			<br>Et notre vie durant
+				nous jouons
+				plusieurs rôles.
+		</h1>
 	</div>
-
 	<div class="superconteneur">
 		<div class="conteneur">
 			{% for evenement in evenements %}
