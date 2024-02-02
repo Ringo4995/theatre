@@ -5,12 +5,8 @@
 
 
 {% block body %}
-<h1 class="acroche">
-	Le monde entier est un théâtre, Et tous,<br> hommes et femmes, n'en sont que les acteurs. <br>Et notre vie durant
-	nous jouons
-	plusieurs rôles.
-</h1>
-<div class="opac"></div>
+
+<div class="opac">
 <div class="carousel slide" id="myCarousel" data-bs-ride="carousel">
 	<div class="carousel-inner">
 		<div class="carousel-item active">
@@ -24,7 +20,11 @@
 		</div>
 	</div>
 </div>
-
+<h1 class="acroche">
+	Le monde entier est un théâtre, Et tous,<br> hommes et femmes, n'en sont que les acteurs. <br>Et notre vie durant
+	nous jouons
+	plusieurs rôles.
+</h1></div>
 <div class="container">
 	{% for evenement in evenements %}
 	<div class="card">
