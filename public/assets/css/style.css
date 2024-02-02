@@ -1,9 +1,13 @@
+*{
+    font-size: 20px !important;
+}
 body{
     background-image: url(../img/morgane-bru-carte-copie.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Gamja Flower', sans-serif;
+   
 }
 
 .vide{
@@ -14,4 +18,12 @@ body{
 .event{
     display: flex;
     justify-content: space-between;
+}
+.navba0 .navba .margeCompte{
+    margin-left: 17rem !important;
+}
+
+.taille {
+    width: 100%;
+    height: 100vh;
 }
