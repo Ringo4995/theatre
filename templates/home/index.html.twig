@@ -5,25 +5,46 @@
 
 
 {% block body %}
-
-	<div id="slider">
-		<div id="prev"></div>
-		<div id="next"></div>
-		<img src="" alt="">
+	<h1 class="acroche">
+		Le monde entier est un theatre, Et tous,<br>
+		hommes et femmes, n'en sont que les acteurs.
+		<br>Et notre vie durant
+									nous jouons
+									plusieurs roles.
+	</h1>
+	<div class="opac"></div>
+	<div class="carousel slide" id="myCarousel" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="{{ asset('dossierIamge/danceur.jpg') }}" class="d-block w-100 taille" alt="Slide 1">
+			</div>
+			<div class="carousel-item">
+				<img src="{{ asset('dossierIamge/figure.jpg') }}" class="d-block w-100 taille" alt="Slide 2">
+			</div>
+			<div class="carousel-item">
+				<img src="{{ asset('dossierIamge/dance.jpg') }}" class="d-block w-100 taille" alt="Slide 3">
+			</div>
+		</div>
 	</div>
 
-	<div class="container">
-		{% for evenement in evenements %}
-			<div class="card">
-				<img src="{{asset('/dossierIamge/' ~ evenement.image)}}" alt="{{ evenement.titre }}" style="width:100%">
-				<h1>{{ evenement.titre }}</h1>
-				<p class="price">{{ evenement.prix }} €</p>
-				<p>Some text about the jeans..</p>
-				<p>
-					<button>En savoir plus</button>
-				</p>
-			</div>
-		{% endfor %}
-    </div>
+	<div class="superconteneur">
+		<div class="conteneur">
+			{% for evenement in evenements %}
+				<div class="card">
+					<img src="{{asset('/dossierIamge/' ~ evenement.image)}}" alt="{{ evenement.titre }}" style="width:100%">
+					<h1>{{ evenement.titre }}</h1>
+					<p class="price">{{ evenement.prix }}
+						€</p>
+					<p>Some text about the jeans..</p>
+					<p>
+						<button>En savoir plus</button>
+					</p>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="navigation flex justify-center mb-8">
+			{{ knp_pagination_render(evenements) }}
+		</div>
+	</div>
 
-	{% endblock %}
+{% endblock %}
