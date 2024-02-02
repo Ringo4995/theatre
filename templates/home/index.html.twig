@@ -3,63 +3,27 @@
 {% block title %}Théâtre de l'Alchimiste
 {% endblock %}
 
+
 {% block body %}
-	<div class="vide"></div>
 
-	<div class="event">
-		<div class="card" style="width: 18rem;">
-			<img class="card-img-top" src="..." alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
-
-		<div class="card" style="width: 18rem;">
-			<img class="card-img-top" src="..." alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
-
-		<div class="card" style="width: 18rem;">
-			<img class="card-img-top" src="..." alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
-
-		<div class="card" style="width: 18rem;">
-			<img class="card-img-top" src="..." alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
-
-		<div class="card" style="width: 18rem;">
-			<img class="card-img-top" src="..." alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
-		<div class="card" style="width: 18rem;">
-			<img class="card-img-top" src="..." alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
+	<div id="slider">
+		<div id="prev"></div>
+		<div id="next"></div>
+		<img src="" alt="">
 	</div>
 
+	<div class="container">
+		{% for evenement in evenements %}
+			<div class="card">
+				<img src="{{asset('/dossierIamge/' ~ evenement.image)}}" alt="{{ evenement.titre }}" style="width:100%">
+				<h1>{{ evenement.titre }}</h1>
+				<p class="price">{{ evenement.prix }} €</p>
+				<p>Some text about the jeans..</p>
+				<p>
+					<button>En savoir plus</button>
+				</p>
+			</div>
+		{% endfor %}
+    </div>
 
-{% endblock %}
+	{% endblock %}
