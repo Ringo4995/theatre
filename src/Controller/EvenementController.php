@@ -19,7 +19,7 @@ class EvenementController extends AbstractController
     #[Route('/', name: 'app_evenement_index', methods: ['GET'])]
     public function index(EvenementRepository $evenementRepository): Response
     {
-        return $this->render('evenement/index.html.twig', [
+        return $this->render('evenement/evenement.html.twig', [
             'evenements' => $evenementRepository->findAll(),
         ]);
     }
