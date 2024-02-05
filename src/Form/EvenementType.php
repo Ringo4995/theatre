@@ -16,7 +16,8 @@ class EvenementType extends AbstractType
         $builder
             ->add('titre')
             ->add('image', FileType::class, [
-                "data_class" => null
+                "data_class" => null,
+                "required" =>false
                 // 'attr' => [
                 //     'accept' => "image/*"
                 // ],

@@ -49,9 +49,10 @@ class EvenementController extends AbstractController
                 } catch (FileException $e) {
                     $e->getMessage();
                 }
+             $evenement->setImage($newFilename);
             }
 
-            $evenement->setImage($newFilename);
+          
             // 
             if ($evenement->isValidevenement() == null) {
                 $evenement->setValidevenement(false);

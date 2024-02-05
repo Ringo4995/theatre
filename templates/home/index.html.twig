@@ -6,46 +6,92 @@
 
 {% block body %}
 
-	<div class="opac">
-		<div class="carousel slide" id="myCarousel" data-bs-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="{{ asset('dossierIamge/danceur.jpg') }}" class="d-block w-100 taille" alt="Slide 1">
-				</div>
-				<div class="carousel-item">
-					<img src="{{ asset('dossierIamge/figure.jpg') }}" class="d-block w-100 taille" alt="Slide 2">
-				</div>
-				<div class="carousel-item">
-					<img src="{{ asset('dossierIamge/dance.jpg') }}" class="d-block w-100 taille" alt="Slide 3">
-				</div>
+<div class="opac">
+	<div class="carousel slide" id="myCarousel" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="{{ asset('dossierIamge/danceur.jpg') }}" class="d-block w-100 taille" alt="Slide 1">
+			</div>
+			<div class="carousel-item">
+				<img src="{{ asset('dossierIamge/figure.jpg') }}" class="d-block w-100 taille" alt="Slide 2">
+			</div>
+			<div class="carousel-item">
+				<img src="{{ asset('dossierIamge/dance.jpg') }}" class="d-block w-100 taille" alt="Slide 3">
 			</div>
 		</div>
-		<h1 class="acroche">
-			Le monde entier est un théâtre, Et tous,<br>
-			hommes et femmes, n'en sont que les acteurs.
-			<br>Et notre vie durant
-				nous jouons
-				plusieurs rôles.
-		</h1>
 	</div>
-	<div class="superconteneur">
-		<div class="conteneur">
-			{% for evenement in evenements %}
-				<div class="card">
-					<img src="{{asset('/dossierIamge/' ~ evenement.image)}}" alt="{{ evenement.titre }}" style="width:100%">
-					<h1>{{ evenement.titre }}</h1>
-					<p class="price">{{ evenement.prix }}
-						€</p>
-					<p>Some text about the jeans..</p>
-					<p>
-						<button>En savoir plus</button>
-					</p>
-				</div>
-			{% endfor %}
+	<h1 class="acroche">
+		Le monde entier est un théâtre, Et tous,<br>
+		hommes et femmes, n'en sont que les acteurs.
+		<br>Et notre vie durant
+		nous jouons
+		plusieurs rôles.
+	</h1>
+</div>
+<div class="superconteneur espaceSou" id="eventdispo">
+
+	<h1>&nbsp &nbsp &nbsp Evenements Actuels :</h1>
+	<div class="conteneur">
+		{% for evenement in evenements %}
+		<div class="card">
+			{% if evenement.image == null %}
+			<img id="card" src="{{asset('/dossierIamge/evenement.jpg')}}" alt="image par defaut" 
+				style="width:100%" height="50%">
+			{% else %}
+			<img id="card" src="{{asset('/dossierIamge/' ~ evenement.image)}}" alt="{{ evenement.titre }}"
+				style="width:100%" height="50%">
+			{% endif %}
+
+			<h1>{{ evenement.titre }}</h1>
+			<p class="price">{{ evenement.prix }}
+				€</p>
+			<p>Some text about the jeans..</p>
+			<p>
+				<button class="carteevenemet">En savoir plus <span>&rarr;</span></button>
+			</p>
 		</div>
-		<div class="navigation flex justify-center mb-8">
-			{{ knp_pagination_render(evenements) }}
-		</div>
+		{% endfor %}
+	</div>
+	<div class="navigation flex justify-center mb-8">
+		{{ knp_pagination_render(evenements) }}
+	</div>
+</div>
+<div class="offreztheatre  " id="offreztheatre">
+	<h1>offrez du théâtre !</h1>
+	<p> Offrez a vos proche une chance pour decouvrir le theatre </p>
+	<p>
+		L'alchimiste vous propose des bons cadeaux qui permettent de choisir librement des spectacles et dates de
+		venues.</p>
+
+	<br><br><br>
+	<div class="offre">
+		<img class="cardoffre" src="{{asset('/offre/creme.png')}}" alt="image par defaut">
+		<img class="cardoffre" src="{{asset('/offre/vert.png')}}" alt="image par defaut">
+		<img class="cardoffre" src="{{asset('/offre/rose.png')}}" alt="image par defaut">
+	</div>
+	<br><br><br>
+	<p>Pour plus d'information veillez cliquer <a href="#contact">ICI</a></p>
+</div>
+
+
+<div class="umap" id="umap">
+	<div class="lieu">
+		<h1>comment venir ?</h1>
+		<h2>accès à L'ALCHIMISTE</h2>
+		<ul>
+			<li>le bus ...</li>
+			<li> le train....</li>
+
+		</ul>
+		<h2>accès en salle</h2>
+		<p>Votre placement en salle est garanti jusqu’à 5 minutes avant le début de la représentation. Une fois le
+			spectacle
+			commencé, vous ne pourrez plus accéder à la salle.</p>
+	</div>
+	<div class="map">
+		<iframe width="100%" height="400px" frameborder="0" allowfullscreen allow="geolocation"
+			src="//umap.openstreetmap.fr/en/map/untitled-map_1019754?scaleControl=false&miniMap=true&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true&datalayers=3149931%2C3149947#18/49.92541/1.07201"></iframe>
 	</div>
 
+</div>
 {% endblock %}

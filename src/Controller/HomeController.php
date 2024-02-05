@@ -31,7 +31,10 @@ class HomeController extends AbstractController
         
         
     }
+    #[Route('/histoire', name: 'app_histoire')]
+    public function histoire(){
+        return $this->render('home/histoire.html.twig');
 
-    
+    }
 
 }
