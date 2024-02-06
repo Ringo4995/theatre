@@ -1,7 +1,8 @@
 *{
-    font-size: 15px !important;
-    font-family: 'Gamja Flower', sans-serif;
+    font-size: 1rem !important;
+    /* font-family: 'Gamja Flower', sans-serif; */
     /* font-family: 'Pacifico', cursive; */
+    font-family: 'Protest Riot', sans-serif;
     text-decoration: none !important;
     list-style: none;
 }
@@ -54,124 +55,7 @@ footer{
     justify-content: space-between;
 }
 
-/*    *******************************CSS SOUHILA ********************** */
-/* .navba0 .navba .margeCompte{
-    margin-left: 17rem !important;
-}
 
-@media screen and (max-width: 800px) {
-.navba0 .navba .margeCompte {
-        margin-left: 0rem !important;
-    }
-} */
-.taille {
-    width: 100%;
-    height: 100vh;
-}
-.opac{
-    position: relative;
-    opacity: 0.9;
-    background-color: #000;
-}
-/* .opac{
-    position: absolute;
-    top:72.5px;
-    left: 0; 
-    z-index: 11111;   
-    opacity: 0.6
-    ;
-    width: 100%;
-    height: 117vh;
-    background-color: #000;
-} */
-h1.acroche{
-position: absolute;
-    top: 50%;
-    left: 50%;
-    border: none;
-    /* background-color: #4a3b3b44; */
-    font-weight: 900 !important;
-    font-size: 1.5rem !important;
-    transform: translate(-50%, -50%);
-    z-index: 1111111111111111111;
-    /* color: rgb(243, 167, 3);
-text-shadow: -11px -9px 10px #CEBF4E; */
-/* -webkit-box-shadow: -16px -16px 17px -4px rgba(0, 0, 0, 0.76);
-    box-shadow: -16px -16px 17px -4px rgba(0, 0, 0, 0.76);
-*/
-
-color: #450c0c;
-  
-  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #445341, 0 0 30px #32452d, 0 0 40px #344030, 0 0 55px #2a3827, 0 0 75px #202b1d;
-  } 
-/* .espaceSou{
-  padding: 10% 0 0 10%;
-} */
-/* .navigation{
-  position: fixed;
-  width: 100%;
-  z-index: 11111111111111111111111;
-
-} */
-.offreztheatre{
-  padding: 10%;
-  
-    text-align: center;
-    font-weight: 900;
-    background-color: #765d5d54;
-    width: 100%;
-   
-}
-.offreztheatre .offre{
-  width: 100%;
-  
-  display: flex;
-  justify-content: space-between;
-}
-.offreztheatre .offre .cardoffre{
-  display: block;
-  width: 30%;
-  border: 1px solid rgb(177, 171, 171);
-  box-shadow: -20px -17px 24px 5px rgba(0, 0, 0, 0.1);
-transform: rotate(10deg);
-}
-
-
-.umap{
-  width: 100%;
- padding: 5%;
-  display: flex;
-  justify-content: space-between;
-}
-.lieu{
-  width: 40%;
-
-}
-.map{
-  
-  width: 40%;
-}
-footer .rgpd ,
-footer .adresse ,
-footer .reseau {
-width: 33%;
-text-align: center;
-}
-footer .rgpd a, footer .adresse a, footer .reseau a i{
-  font-size: 1.5em !important;
-
-}
-.reseau ul{
-  display: flex;
-  justify-content: space-around;
-  width: 30%;
-}
-
-
-
-
-
-/* ********************************FIN************************** */
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -210,7 +94,136 @@ footer .rgpd a, footer .adresse a, footer .reseau a i{
   }
 
 
+/*    *******************************CSS SOUHILA ********************** */
+/* .navba0 .navba .margeCompte{
+    margin-left: 17rem !important;
+}
 
+@media screen and (max-width: 800px) {
+.navba0 .navba .margeCompte {
+        margin-left: 0rem !important;
+    }
+} */
+.taille {
+  width: 100%;
+  height: 100vh;
+}
+
+.opac {
+  position: relative;
+  opacity: 0.9;
+  background-color: #000;
+}
+
+/* .opac{
+    position: absolute;
+    top:72.5px;
+    left: 0; 
+    z-index: 11111;   
+    opacity: 0.6
+    ;
+    width: 100%;
+    height: 117vh;
+    background-color: #000;
+} */
+h1.acroche {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: none;
+  /* background-color: #4a3b3b44; */
+  font-weight: 900 !important;
+  font-size: 1.5rem !important;
+  transform: translate(-50%, -50%);
+  z-index: 1111111111111111111;
+  /* color: rgb(243, 167, 3);
+text-shadow: -11px -9px 10px #CEBF4E; */
+  /* -webkit-box-shadow: -16px -16px 17px -4px rgba(0, 0, 0, 0.76);
+    box-shadow: -16px -16px 17px -4px rgba(0, 0, 0, 0.76);
+*/
+
+  color: #0f0f01;
+
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #445341, 0 0 30px #32452d, 0 0 40px #344030, 0 0 55px #2a3827, 0 0 75px #202b1d;
+}
+
+/* .espaceSou{
+  padding: 10% 0 0 10%;
+} */
+/* .navigation{
+  position: fixed;
+  width: 100%;
+  z-index: 11111111111111111111111;
+
+} */
+.offreztheatre {
+  padding: 10%;
+
+  text-align: center;
+  font-weight: 900;
+  background-color: #765d5d54;
+  width: 100%;
+
+}
+
+.offreztheatre .offre {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.offreztheatre .offre .cardoffre {
+  display: block;
+  width: 30%;
+  border: 1px solid rgb(177, 171, 171);
+  box-shadow: -20px -17px 24px 5px rgba(0, 0, 0, 0.1);
+  transform: rotate(10deg);
+}
+
+
+.umap {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lieu {
+  width: 40%;
+
+}
+
+.map {
+
+  width: 40%;
+}
+
+footer .rgpd,
+footer .adresse,
+footer .reseau {
+  width: 33%;
+  text-align: center;
+}
+
+footer .rgpd a,
+footer .adresse a,
+footer .reseau a i {
+  font-size: 1.5em !important;
+
+}
+
+.reseau ul {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+
+
+
+
+/* ********************************FIN************************** */
 
 /* souhila savoir plus evenement */
 

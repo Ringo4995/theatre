@@ -23,7 +23,7 @@ class EvenementController extends AbstractController
             'evenements' => $evenementRepository->findAll(),
         ]);
     }
-
+    
 
 
     #[Route('/new', name: 'app_evenement_new', methods: ['GET', 'POST'])]
@@ -49,10 +49,10 @@ class EvenementController extends AbstractController
                 } catch (FileException $e) {
                     $e->getMessage();
                 }
-             $evenement->setImage($newFilename);
+                $evenement->setImage($newFilename);
             }
 
-          
+
             // 
             if ($evenement->isValidevenement() == null) {
                 $evenement->setValidevenement(false);
