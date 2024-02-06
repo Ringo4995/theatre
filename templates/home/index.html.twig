@@ -28,15 +28,15 @@
 		plusieurs rôles.
 	</h1>
 </div>
-<div class="superconteneur espaceSou" id="eventdispo">
+{# <div class="superconteneur espaceSou" id="eventdispo">
 
 	<h1>&nbsp &nbsp &nbsp Evenements Actuels :</h1>
 	<div class="conteneur">
 		{% for evenement in evenements %}
 		<div class="card">
 			{% if evenement.image == null %}
-			<img id="card" src="{{asset('/dossierIamge/evenement.jpg')}}" alt="image par defaut" 
-				style="width:100%" height="50%">
+			<img id="card" src="{{asset('/dossierIamge/evenement.jpg')}}" alt="image par defaut" style="width:100%"
+				height="50%">
 			{% else %}
 			<img id="card" src="{{asset('/dossierIamge/' ~ evenement.image)}}" alt="{{ evenement.titre }}"
 				style="width:100%" height="50%">
@@ -52,10 +52,87 @@
 		</div>
 		{% endfor %}
 	</div>
+
+
+
+
 	<div class="navigation flex justify-center mb-8">
 		{{ knp_pagination_render(evenements) }}
 	</div>
+</div> #}
+
+
+<div class="testevenementmodele superconteneur"  id="eventdispo" width="100%">
+	<h1>&nbsp &nbsp &nbsp Evenements Actuels :</h1>
+	<br><br><br>
+	<div class="conten">
+		{% for evenement in evenements %}
+		<div class="a-box">
+			<div class="img-container">
+				<div class="img-inner">
+					<div class="inner-skew">
+
+
+						{% if evenement.image == null %}
+						<img src="{{ asset('dossierIamge/evenement.gif') }}" alt="Slide 2">
+						{% else %}
+						<img src="{{asset('/dossierIamge/' ~ evenement.image)}}" alt="{{ evenement.titre }}">
+						{% endif %}
+
+
+
+					</div>
+				</div>
+			</div>
+			<div class="text-container">
+				<h3>{{ evenement.titre }}</h3>
+				<p class="price">{{ evenement.prix }}
+					€</p>
+				<div>
+					This a demo experiment to skew image container. It looks good.
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab sit fuga consequatur facilis error
+					deleniti
+					animi magni, architecto recusandae accusamus!
+				</div>
+
+			</div>
+			<div class="action">
+				<div class="ensavoir"><a href="{{path('ensavoir')}}" target="_blank" rel="noopener noreferrer">en savoir
+						plus<span>&rarr;</span></a></div>
+				<div class="reserver"><a href="{{path('app_home')}}" target="_blank" rel="noopener noreferrer">reserver</a></div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<br><br><br>
+	<div class="flex justify-center mb-8 ">
+		{{ knp_pagination_render(evenements) }}
+	</div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="offreztheatre  " id="offreztheatre">
 	<h1>offrez du théâtre !</h1>
 	<p> Offrez a vos proche une chance pour decouvrir le theatre </p>

@@ -31,7 +31,7 @@ footer{
   background-color: rgb(245, 250, 253);
   justify-content: center;
   /* height: 80vh; */
-  padding: 10% 10%;
+  padding: 10% 0 10% 0;
 }
 
 .conteneur{
@@ -150,12 +150,7 @@ text-shadow: -11px -9px 10px #CEBF4E; */
 /* .espaceSou{
   padding: 10% 0 0 10%;
 } */
-/* .navigation{
-  position: fixed;
-  width: 100%;
-  z-index: 11111111111111111111111;
 
-} */
 .offreztheatre {
   padding: 10%;
 
@@ -240,4 +235,103 @@ footer .reseau a i {
       transition: 0.2s;
       cursor: pointer;
     }
-    /* souhila  */
+    /* souhila  v2 card    la partie evenements  */
+        .testevenementmodele {
+          text-align: center;
+          /* padding: 30px; */
+          background: #f8f4f2;
+          font-family: Arial;
+          width: 100%;
+          margin: 0;
+         
+          
+        }
+    
+        .conten {
+          display: flex;
+          justify-content: space-around;
+          box-sizing: border-box;
+          width: 100%;
+          flex-wrap: wrap;
+   
+        }
+    
+        .a-box {
+          display: inline-block;
+          width: 30%;
+          text-align: center;
+         
+        }
+    
+        .img-container {
+          height: 230px;
+          width: 200px;
+          overflow: hidden;
+          border-radius: 0px 0px 20px 20px;
+          display: inline-block;
+        }
+    
+        .img-container img {
+          transform: skew(0deg, -13deg);
+          height: 250px;
+          margin: -35px 0px 0px -70px;
+        }
+    
+        .inner-skew {
+          display: inline-block;
+          border-radius: 20px;
+          overflow: hidden;
+          padding: 0px;
+          transform: skew(0deg, 13deg);
+          font-size: 0px;
+          margin: 30px 0px 0px 0px;
+          background: #c8c2c2;
+          height: 250px;
+          width: 200px;
+        }
+    
+        .text-container {
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          padding: 120px 20px 20px 20px;
+          border-radius: 20px;
+          background: #fff;
+          margin: -120px 0px 0px 0px;
+          line-height: 19px;
+          font-size: 14px;
+          height: 50vh;
+        }
+    
+        .text-container h3 {
+          margin: 20px 0px 10px 0px;
+          color: #041e28;
+          font-size: 18px;
+        }
+    
+        .action {
+          display: flex;
+          justify-content: space-around;
+        }
+    
+        .ensavoir,
+        .reserver {
+    
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          border-radius: 20px;
+          background: rgba(241, 241, 8, 0.493);
+          padding: 5px;
+          width: 40%;
+          margin: auto;
+          margin-top: 20px;
+        }
+    
+        .ensavoir a,
+        .reserver a {
+          text-decoration: none;
+          color: white;
+    
+        }
+    
+        .reserver {
+          background: #A9BBA2;
+        }
+ /* souhila  v2 card    la partie evenements  fin */

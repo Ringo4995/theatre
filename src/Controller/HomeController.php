@@ -20,7 +20,7 @@ class HomeController extends AbstractController
         $data = $evenementRepository->findbyeventvalid(true);
         $evenements = $paginatorInterface->paginate(
             $data,
-            $request->query->getInt('page',1),4
+            $request->query->getInt('page',1),3
         );
 
         // dd($evenements);
@@ -35,6 +35,11 @@ class HomeController extends AbstractController
     public function histoire(){
         return $this->render('home/histoire.html.twig');
 
+    }
+    #[Route('/ensavoir', name: 'ensavoir')]
+    public function ensavoir()
+    {
+        return $this->render('evenement/ensavoir.html.twig');
     }
 
 }
