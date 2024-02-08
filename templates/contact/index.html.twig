@@ -1,7 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contactez Nou{% endblock %}
+{% block title %}contatez nous{% endblock %}
 
 {% block body %}
+<div class="container">
 
+
+    <h1>contact</h1>
+
+    {{ form_errors(form) }}
+
+    {{ form_start(form) }}
+
+    {{ form_row(form) }}
+
+
+    {{ form_end(form) }}
+</div>
 {% endblock %}
