@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 #[Route('/evenement')]
 class EvenementController extends AbstractController
@@ -25,8 +26,8 @@ class EvenementController extends AbstractController
     }
     
     #[Route('/reservation', name: 'reservation')]
-    public function reservation(){
-        return $this->render('evenement/reservation.html.twig');
+    public function reservation(): RedirectResponse{
+        return $this->render('test/paypal.html.twig');
 
     }
 
