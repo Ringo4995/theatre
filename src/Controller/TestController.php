@@ -15,7 +15,11 @@ class TestController extends AbstractController
             'controller_name' => 'TestController',
         ]);
     }
-
+    #[Route('/paypal', name: 'paypal')]
+    public function paypal()
+    {
+        return $this->render('test/paypal.html.twig');
+    }
 
     #[Route('/test', name: 'test')]
     public function test()

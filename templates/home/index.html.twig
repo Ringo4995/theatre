@@ -62,7 +62,7 @@
 </div> #}
 
 
-<div class="testevenementmodele superconteneur"  id="eventdispo" width="100%">
+<div class="testevenementmodele superconteneur" id="eventdispo" width="100%">
 	<h1>&nbsp &nbsp &nbsp Evenements Actuels :</h1>
 	<br><br><br>
 	<div class="conten">
@@ -99,7 +99,8 @@
 			<div class="action">
 				<div class="ensavoir"><a href="{{path('ensavoir')}}" target="_blank" rel="noopener noreferrer">en savoir
 						plus<span>&rarr;</span></a></div>
-				<div class="reserver"><a href="{{path('app_home')}}" target="_blank" rel="noopener noreferrer">reserver</a></div>
+				<div class="reserver"><a href="{{path('app_home')}}" target="_blank"
+						rel="noopener noreferrer">reserver</a></div>
 			</div>
 		</div>
 		{% endfor %}
@@ -147,7 +148,7 @@
 		<img class="cardoffre" src="{{asset('/offre/rose.png')}}" alt="image par defaut">
 	</div>
 	<br><br><br>
-	<p>Pour plus d'information veillez cliquer <a href="#contact">ICI</a></p>
+	<p>Pour plus d'information veillez cliquer <a href="{{path('app_contact')}}">ICI</a></p>
 </div>
 
 
