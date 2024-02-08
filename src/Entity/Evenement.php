@@ -38,6 +38,9 @@ class Evenement
     #[ORM\Column]
     private ?bool $validevenement = null;
 
+    #[ORM\ManyToOne(inversedBy: 'evenements')]
+    private ?Categorie $categorie = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -135,6 +138,18 @@ class Evenement
     public function setValidevenement(bool $validevenement): static
     {
         $this->validevenement = $validevenement;
+
+        return $this;
+    }
+
+    public function getCategorie(): ?Categorie
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?Categorie $categorie): static
+    {
+        $this->categorie = $categorie;
 
         return $this;
     }
