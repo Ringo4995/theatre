@@ -1,5 +1,5 @@
 *{
-    font-size: 1rem !important;
+    /* font-size: 1rem !important; */
     /* font-family: 'Gamja Flower', sans-serif; */
     /* font-family: 'Pacifico', cursive; */
     font-family: 'Protest Riot', sans-serif;
@@ -55,7 +55,24 @@ footer{
     justify-content: space-between;
 }
 
+/* Zone histoire */
+.story{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
 
+}
+
+.stitle{
+  font-size: 2rem;
+  margin-bottom: 3%;
+}
+
+.incipit{
+  display: flex;
+  flex-direction: row;
+}
+/* Fin zone histoire */
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
