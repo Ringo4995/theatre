@@ -71,7 +71,17 @@ footer{
 .incipit{
   display: flex;
   flex-direction: row;
+  margin: 5%;
 }
+
+.incipit p{
+  width: 65%;
+}
+
+.imgIncipit img{
+  width: 100%;
+}
+
 /* Fin zone histoire */
 
 .card {
