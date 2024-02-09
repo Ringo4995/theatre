@@ -24,7 +24,14 @@ class EvenementController extends AbstractController
             'evenements' => $evenementRepository->findAll(),
         ]);
     }
-    
+
+    #[Route('/eventbyuser', name: 'eventbyuser')]
+    public function eventbyuser()
+    {
+        
+        return $this->render('evenement/index.html.twig');
+    }
+
     #[Route('/reservation', name: 'reservation')]
     public function reservation(){
         return $this->render('test/paypal.html.twig');

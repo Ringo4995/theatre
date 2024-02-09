@@ -5,6 +5,7 @@
     font-family: 'Protest Riot', sans-serif;
     text-decoration: none !important;
     list-style: none;
+    scroll-behavior: smooth;
 }
 body{
     /* background-image: url(../img/morgane-bru-carte-copie.jpg); */
@@ -361,4 +362,25 @@ footer .reseau a i {
         .reserver {
           background: #A9BBA2;
         }
+
+
+             /* retour en haut */
+
+
+                                  
  /* souhila  v2 card    la partie evenements  fin */
+
+.retourh i{
+  position: fixed;
+ 
+  bottom: 20px;
+  right: 40px;
+
+ font-size: 4rem;
+
+  background-color: #032d342a;
+  /* Couleur de fond du cercle */
+border-radius: 50%;
+ 
+  color: rgb(67, 101, 156);
+}
