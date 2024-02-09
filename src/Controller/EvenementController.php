@@ -26,7 +26,7 @@ class EvenementController extends AbstractController
     }
     
     #[Route('/reservation', name: 'reservation')]
-    public function reservation(): RedirectResponse{
+    public function reservation(){
         return $this->render('test/paypal.html.twig');
 
     }
