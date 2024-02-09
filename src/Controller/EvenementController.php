@@ -26,16 +26,20 @@ class EvenementController extends AbstractController
     }
 
     #[Route('/eventbyuser', name: 'eventbyuser')]
-    public function eventbyuser()
+    public function eventbyuser(EvenementRepository $evenementRepository, UserInterface $userInterface)
     {
-        
-        return $this->render('evenement/index.html.twig');
+        // dd($userInterface->getId());
+        $evenements = $evenementRepository->findeventbyuser($userInterface->getId());
+
+        return $this->render('evenement/index.html.twig', [
+            "evenements" => $evenements
+        ]);
     }
 
     #[Route('/reservation', name: 'reservation')]
-    public function reservation(){
+    public function reservation()
+    {
         return $this->render('test/paypal.html.twig');
-
     }
 
     #[Route('/new', name: 'app_evenement_new', methods: ['GET', 'POST'])]
