@@ -1,20 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}contatez nous{% endblock %}
+{% block title %}Contactez-Nous
+{% endblock %}
 
 {% block body %}
-<div class="container">
+	<div class="bigContiendre">
+		<div class="contiendre">
 
 
-    <h1>contact</h1>
+			<h1 class="annonce">Formulaire de contact</h1>
 
-    {{ form_errors(form) }}
-
-    {{ form_start(form) }}
-
-    {{ form_row(form) }}
+			{{ form_errors(form) }}
 
 
-    {{ form_end(form) }}
-</div>
+			{{ form_start(form) }}
+            <div class="contactNom contactNomnon">{{ form_row(form.nom, {'attr': {'placeholder': 'Votre nom'}}) }}</div>
+            <div class="contactNom">{{ form_row(form.prenom, {'attr': {'placeholder': 'Votre Prénom'}}) }}</div>
+            <div class="contactNom contactMail">{{ form_row(form.email, {'attr': {'placeholder': 'Votre email'}}) }}</div>
+            <div class="contactNom contactQuestion">{{ form_row(form.question, {'attr': {'placeholder': 'Votre message'}}) }}</div>
+            <div class="contactNom contactBtn">{{ form_row(form.Contacter) }}</div>
+			{{ form_end(form) }}
+		</div>
+	</div>
 {% endblock %}

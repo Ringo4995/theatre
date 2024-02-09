@@ -48,9 +48,11 @@ class ContactController extends AbstractController
                     ->to(new Address('will.beyaert@gmail.com', 'Vincent'))
 
                     // ->to()
-                    ->subject('Demande de contacte')
+                    ->subject('Demande de contact')
                     ->htmlTemplate('contact/emailconfirmation.html.twig')
                     ->context([
+                        'nom' => $contact->getNom(),
+                        'prenom' => $contact->getPrenom(),
                         'question' => $contact->getQuestion(),
                         // 'email' => $contact->getEmail(),
                         // Ajoutez d'autres paramètres ici

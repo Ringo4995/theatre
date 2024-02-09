@@ -84,6 +84,111 @@ footer{
 
 /* Fin zone histoire */
 
+/* Zone Contactez-nous */
+
+.bigContiendre{
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f4f2;
+}
+
+.contiendre{
+  width: 40%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+  background-image: url(../img/morgane-bru-carte-copie.jpg);
+  background-position: center;
+  background-size: 110%;
+}
+
+.annonce{
+  position: relative;
+  top: -125px;
+}
+
+.contactNom{
+  width: 200%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  color: white;
+  text-shadow: 3px 3px 3px #000;
+}
+
+.contactNom label{
+  padding-right: 2%;
+}
+
+.contactNomnon{
+  position: relative;
+  left: 24px;
+}
+
+.contactMail{
+  position: relative;
+  left: 16px;
+}
+
+.contactQuestion{
+  position: relative;
+  left: -10px;
+}
+
+.contactQuestion label{
+  position: relative;
+  top: -20px;
+}
+
+.contactBtn{
+  position: relative;
+  left: 110px;
+}
+
+/* Fin Zone Contactez-nous */
+
+/* Zone New Event */
+
+.bigContiendreEvent{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f4f2;
+}
+
+.contiendreEvent{
+  width: 40%;
+  height: 120vh;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+  background-image: url(../img/morgane-bru-poster1.jpg);
+  background-position: center;
+  background-size: 100%;
+}
+
+.eventForm {
+  width: 200%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  color: white;
+  text-shadow: 3px 3px 3px #000;
+}
+
+/* Fin New Event */
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 250px;
