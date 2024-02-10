@@ -6,11 +6,11 @@
 {% block body %}
 	<div class="bigContiendreEvent">
 		<div class="contiendreEvent">
-			<h1>Créez un nouvel événement :</h1>
+			<h1 class="annonceEvent">Créez un nouvel événement :</h1>
 
 			{{ include('evenement/_form.html.twig') }}
 
-			<a href="{{ path('app_evenement_index') }}">back to list</a>
+			<a href="{{ path('eventbyuser') }}">back to list</a>
 		</div>
 	</div>
 {% endblock %}

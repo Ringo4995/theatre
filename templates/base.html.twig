@@ -13,8 +13,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 		crossorigin="anonymous"></script>
+	<script src="{{asset('assets/js/scroll.js')}}"></script>
 	<script src="{{asset('assets/js/carrousel.js')}}"></script>
-
+	<link rel="stylesheet" href="{{ asset('assets/css/profil.css') }}" />
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,8 +69,8 @@
 						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
 							aria-haspopup="true" aria-expanded="false"><i class="fa-regular fa-user"></i>Mon compte</a>
 						<div class="dropdown-menu">
-							{% if app.user %}
-							<a class="dropdown-item" href="#">Mon profil</a>
+							{% if app.user != null %}
+							<a class="dropdown-item" href="{{path('profil')}}">Mon profil</a>
 							<a class="dropdown-item" href="{{path('app_evenement_new')}}">Ajouter un evenement</a>
 
 
@@ -105,11 +106,14 @@
 
 
 	{% block body %}
+
 	{% endblock %}
+	{# ↑ #}
+	<a href="#" class="retourh" id="backToTop"><i class="fa-solid fa-circle-up"></i></a>
 	<footer>
 
 
-		<div class="adresse"><a href="#umap">Comment venir?</a></div>
+		<div class="adresse"><a href="{{path('app_home')}}#umap">Comment venir?</a></div>
 		<div class="rgpd">
 			<ul>
 				<li><a href="">Mentions légales</a></li>

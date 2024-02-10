@@ -27,10 +27,21 @@ class EvenementController extends AbstractController
         ]);
     }
 
-    #[Route('/reservation', name: 'reservation')]
-    public function reservation(){
-        return $this->render('test/paypal.html.twig');
+    #[Route('/eventbyuser', name: 'eventbyuser')]
+    public function eventbyuser(EvenementRepository $evenementRepository, UserInterface $userInterface)
+    {
+        // dd($userInterface->getId());
+        $evenements = $evenementRepository->findeventbyuser($userInterface->getId());
 
+        return $this->render('evenement/index.html.twig', [
+            "evenements" => $evenements
+        ]);
+    }
+
+    #[Route('/reservation', name: 'reservation')]
+    public function reservation()
+    {
+        return $this->render('test/paypal.html.twig');
     }
 
     #[Route('/new', name: 'app_evenement_new', methods: ['GET', 'POST'])]
@@ -67,7 +78,7 @@ class EvenementController extends AbstractController
             $entityManager->persist($evenement);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_evenement_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('eventbyuser');
         }
 
         return $this->renderForm('evenement/new.html.twig', [

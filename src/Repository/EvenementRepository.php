@@ -55,4 +55,15 @@ class EvenementRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+
+
+    public function findeventbyuser($value)
+    {
+        return $this->createQueryBuilder('e')
+            ->andWhere('e.user = :val')
+            ->setParameter('val', $value)
+            ->getQuery()
+            ->getResult();
+    }
 }
