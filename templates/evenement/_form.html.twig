@@ -1,10 +1,9 @@
 {{ form_start(form) }}
-<div class="eventForm">{{ form_row(form.titre, {'attr': {'placeholder': 'Titre du spetacle'}}) }}</div>
+<div class="eventForm">{{ form_row(form.titre, {'attr': {'placeholder': 'Titre du spectacle'}}) }}</div>
 <div class="eventForm">{{ form_row(form.image) }}</div>
-<div class="eventForm">{{ form_row(form.lieu, {'attr': {'placeholder': 'Lieu du spetacle'}}) }}</div>
-<div class="eventForm">{{ form_row(form.description, {'attr': {'placeholder': 'Racontez ce que raconte le spetacle'}}) }}</div>
-<div class="eventForm">{{ form_row(form.prix, {'attr': {'placeholder': 'Combien le spetacle coûte-t-il ?'}}) }}</div>
-<div class="eventForm">{{ form_row(form.dateEvenement) }}</div>
-<div class="eventForm">{{ form_row(form.categorie) }}</div>
-<button class="btn">{{ button_label|default('Save') }}</button>
+<div class="eventForm">{{ form_row(form.lieu, {'attr': {'placeholder': 'Lieu du spectacle'}}) }}</div>
+<div class="eventForm eventDesc">{{ form_row(form.description, {'attr': {'placeholder': 'Racontez l`histoire du spectacle'}}) }}</div>
+<div class="eventForm">{{ form_row(form.prix, {'attr': {'placeholder': 'Combien le spectacle coûte-t-il ?'}}) }}</div>
+<div class="eventForm eventDate">{{ form_row(form.dateEvenement) }} {{ form_row(form.categorie) }}</div>
+<button class="btn annonceEvent">{{ button_label|default('Enregistrer') }}</button>
 {{ form_end(form) }}

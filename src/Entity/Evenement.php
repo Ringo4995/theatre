@@ -23,8 +23,8 @@ class Evenement
     #[ORM\Column(length: 255)]
     private ?string $lieu = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $description = null;
+    /* #[ORM\Column(length: 255, nullable: true)]
+    private ?string $description = null; */
 
     #[ORM\Column(nullable: true)]
     private ?float $prix = null;
@@ -40,6 +40,9 @@ class Evenement
 
     #[ORM\ManyToOne(inversedBy: 'evenements')]
     private ?Categorie $categorie = null;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $description = null;
 
     public function getId(): ?int
     {
@@ -82,7 +85,7 @@ class Evenement
         return $this;
     }
 
-    public function getDescription(): ?string
+    /* public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -92,7 +95,7 @@ class Evenement
         $this->description = $description;
 
         return $this;
-    }
+    } */
 
     public function getPrix(): ?float
     {
@@ -150,6 +153,18 @@ class Evenement
     public function setCategorie(?Categorie $categorie): static
     {
         $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): static
+    {
+        $this->description = $description;
 
         return $this;
     }

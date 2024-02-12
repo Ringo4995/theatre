@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réservation
+{% endblock %}
+
+{% block body %}
+	<div class="carteSavoir">
+
+		<div class="imgSavoir" id="tv">
+			<img src="/dossierIamge/{{evenement.image}}" alt="img" style="width:100%">
+		</div>
+		<div>
+			<h1 class="titreSavoir">{{evenement.titre}}</h1>
+			<p class="lieuSavoir">Lieu de la représentation :
+				{{evenement.lieu}}</p>
+			<h4>Prix du spectacle :
+				{{evenement.prix}}
+				€</h4>
+			<label for="nombrePlaces">Nombre de place :</label>
+			<input type="number" id="nombrePlaces" name="nombrePlaces" min="1">
+			<h4 id="prixTotalLabel">Prix Total :</h4>
+			<h4>Le spectacle aura lieu le
+				{{evenement.dateEvenement|date('d m Y')}}
+				à
+				{{evenement.dateEvenement|date('H:i')}}</h4>
+		</div>
+
+		<script>
+			document.getElementById('nombrePlaces').addEventListener('input', function () {
+var prixSpectacle = parseFloat('{{ evenement.prix }}');
+var nombrePlaces = parseInt(this.value);
+var prixTotal = prixSpectacle * nombrePlaces;
+document.getElementById('prixTotalLabel').textContent = 'Prix Total : ' + prixTotal + ' €';
+});
+		</script>
+
+		<br>
+		<a href="{{path('paypal')}}">
+			<button type="button" class="btn btn-outline-primary">Passer au payement</button>
+		</a>
+	</div>
+{% endblock %}

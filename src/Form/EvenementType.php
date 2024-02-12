@@ -31,7 +31,7 @@ class EvenementType extends AbstractType
             ])
             // ->add('image')
             ->add('lieu')
-            ->add('description', TextareaType::class)
+            ->add('description', TextareaType::class )
             ->add('prix', NumberType::class)
             ->add('dateEvenement')
             // ->add('user')

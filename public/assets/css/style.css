@@ -76,12 +76,30 @@ footer {
   margin: 5%;
 }
 
+.ecriture{
+  width: 100%;
+}
+
 .incipit p {
-  width: 65%;
+  width: 60%;
+}
+
+.imgIncipit{
+  width: 45%;
 }
 
 .imgIncipit img {
   width: 100%;
+}
+
+.potter {
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+}
+
+.imgPotter {
+  margin-right: 5%;
 }
 
 /* Fin zone histoire */
@@ -164,20 +182,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f8f4f2;
-}
-
-.contiendreEvent {
-  width: 40%;
-  height: 200vh;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: solid;
-  background-image: url(../img/morgane-bru-poster1.jpg);
+  background-image: url(../img/FTNmoSKXEAUnSyv.jpg);
   background-position: center;
   background-size: 100%;
 }
@@ -188,6 +193,7 @@ footer {
   padding-top: 5%;
   color: white;
   text-shadow: 3px 3px 3px #000;
+  font-size: larger;
 }
 
 .annonceEvent {
@@ -196,7 +202,46 @@ footer {
   text-shadow: 3px 3px 3px #000;
 }
 
+#evenement_titre{
+  width: 43.2%;
+  text-align: center;
+}
+
+#evenement_lieu{
+  width: 43.8%;
+  text-align: center;
+}
+
+.eventForm label {
+  padding-right: 2%;
+}
+
+.eventDesc label{
+  position: relative;
+  top: -25px;
+}
+
+#evenement_description{
+  width: 37.5%;
+  text-align: center;
+}
+
+#evenement_prix{
+  width: 44%;
+  text-align: center;
+}
+
+.eventDate{
+  display: flex;
+  margin-left: 8%;
+}
+
+#evenement_dateEvenement{
+  padding-right: 150px;
+}
+
 /* Fin New Event */
+
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

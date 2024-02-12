@@ -49,9 +49,13 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/ensavoir', name: 'ensavoir')]
-    public function ensavoir()
-    {
-        return $this->render('evenement/ensavoir.html.twig');
+    #[Route('ensavoir/{id}', name: 'ensavoir')]
+    public function ensavoir(EvenementRepository $evenementRepository, $id){
+        $evenement = $evenementRepository->find($id);
+        return $this->render('evenement/ensavoir.html.twig', [
+            "evenement" => $evenement
+        ]);
     }
+
+    
 }
