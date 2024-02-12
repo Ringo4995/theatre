@@ -9,7 +9,7 @@
 		<div class="imgSavoir" id="tv">
 			<img src="/dossierIamge/{{evenement.image}}" alt="img" style="width:100%">
 		</div>
-		<div>
+		<div class="vite">
 			<h1 class="titreSavoir">{{evenement.titre}}</h1>
 			<p class="lieuSavoir">Lieu de la représentation :
 				{{evenement.lieu}}</p>
@@ -23,6 +23,10 @@
 				{{evenement.dateEvenement|date('d m Y')}}
 				à
 				{{evenement.dateEvenement|date('H:i')}}</h4>
+			<br>
+			<a href="{{path('paypal')}}">
+				<button type="button" class="btn btn-outline-primary">Passer au payement</button>
+			</a>
 		</div>
 
 		<script>
@@ -34,9 +38,6 @@ document.getElementById('prixTotalLabel').textContent = 'Prix Total : ' + prixTo
 });
 		</script>
 
-		<br>
-		<a href="{{path('paypal')}}">
-			<button type="button" class="btn btn-outline-primary">Passer au payement</button>
-		</a>
+
 	</div>
 {% endblock %}

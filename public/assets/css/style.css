@@ -65,6 +65,11 @@ footer {
 
 }
 
+.story h2, .story h4{
+  color: #ccccff;
+  text-shadow: 2px 2px 2px #000;
+}
+
 .stitle {
   font-size: 2rem;
   margin-bottom: 3%;
@@ -98,11 +103,85 @@ footer {
   margin: 5%;
 }
 
+.ecriture , .textPotter , .textValley, .textExplo{
+  text-align: justify;
+}
+
 .imgPotter {
   margin-right: 5%;
 }
 
+.queryvalley {
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+}
+
+.textValley{
+  width: 60%;
+}
+
+.imgValley {
+  margin-left: 5%;
+  width: 100%;
+}
+
+.valley{
+  width: 100%;
+}
+
+.titreValley {
+  text-align: right;
+}
+
+.explo {
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+}
+
+.textExplo{
+  width: 65%;
+}
+
+.imgExplo {
+  width: 100%;
+  margin-right: 5%;
+}
+
+.rateur{
+  width: 100%;
+}
+
 /* Fin zone histoire */
+
+/* Zone inscription */
+
+.bigInscr{
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/ruins-10.jpg);
+  background-position: center;
+  background-size: 106%;
+}
+
+.registerBtn {
+  position: relative;
+  left: 110px;
+  color: white;
+}
+
+.registerMdp{
+  position: relative;
+  right: 42px;
+}
+
+/* Fin Zone inscription */
+
 
 /* Zone Contactez-nous */
 
