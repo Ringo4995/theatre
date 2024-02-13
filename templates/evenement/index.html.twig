@@ -1,48 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Evenement index{% endblock %}
+{% block title %}Evenement index
+{% endblock %}
 
 {% block body %}
-<h1>Mes Evenements</h1>
+	<h1>Mes Evenements</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            {# <th>Id</th> #}
-            <th>Titre</th>
-            <th>Image</th>
-            <th>Lieu</th>
-            <th>Description</th>
-            <th>Prix</th>
-            <th>DateEvenement</th>
-            <th>actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for evenement in evenements %}
-        <tr>
-            {# <td>{{ evenement.id }}</td> #}
-            <td>{{ evenement.titre }}</td>
-            <td>{{ evenement.image }}</td>
-            <td>{{ evenement.lieu }}</td>
-            <td>{{ evenement.description }}</td>
-            <td>{{ evenement.prix }}</td>
-            <td>{{ evenement.dateEvenement ? evenement.dateEvenement|date('Y-m-d H:i:s') : '' }}</td>
-            <td>
-                <a href="{{ path('app_evenement_show', {'id': evenement.id}) }}">afficher</a>
-                <a href="{{ path('app_evenement_edit', {'id': evenement.id}) }}">modifier</a>
-            </td>
-        </tr>
-        {% else %}
-        <tr>
-            <td colspan="8">pas d'evenements</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+	<table class="table">
+		<thead>
+			<tr>
+				{# <th>Id</th> #}
+				<th>Titre</th>
+				<th>Image</th>
+				<th>Lieu</th>
+				<th>Description</th>
+				<th>Prix</th>
+				<th>DateEvenement</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for evenement in evenements %}
+				<tr>
+					{# <td>{{ evenement.id }}</td> #}
+					<td>{{ evenement.titre }}</td>
+					<td>
+						{% if evenement.image == null %}
+							<img src="{{ asset('dossierIamge/evenement.gif') }}" alt="Slide 2">
+						{% else %}
+							<img src="{{asset('/dossierIamge/' ~ evenement.image)}}" alt="{{ evenement.titre }}" style="width: 100%;">
+						{% endif %}
+					</td>
+					<td>{{ evenement.lieu }}</td>
+					<td>{{ evenement.description }}</td>
+					<td>{{ evenement.prix }}</td>
+					<td>{{ evenement.dateEvenement ? evenement.dateEvenement|date('Y-m-d H:i:s') : '' }}</td>
+					<td>
+						<a href="{{ path('app_evenement_show', {'id': evenement.id}) }}">afficher</a>
+						<a href="{{ path('app_evenement_edit', {'id': evenement.id}) }}">modifier</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="8">pas d'evenements</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
 
-<a href="{{ path('app_evenement_new') }}">Ajouter un nouveau evenement</a>
-<div>
-    <a href="{{ path('profil') }}">retour au profil</a>
-</div>
+	<a href="{{ path('app_evenement_new') }}">Ajouter un nouveau evenement</a>
+	<div>
+		<a href="{{ path('profil') }}">retour au profil</a>
+	</div>
 {% endblock %}

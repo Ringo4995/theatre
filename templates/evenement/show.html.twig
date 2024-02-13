@@ -1,46 +1,53 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Evenement{% endblock %}
+{% block title %}Evenement
+{% endblock %}
 
 {% block body %}
-    <h1>Evenement</h1>
+	<h1>Evenement</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ evenement.id }}</td>
-            </tr>
-            <tr>
-                <th>Titre</th>
-                <td>{{ evenement.titre }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ evenement.image }}</td>
-            </tr>
-            <tr>
-                <th>Lieu</th>
-                <td>{{ evenement.lieu }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ evenement.description }}</td>
-            </tr>
-            <tr>
-                <th>Prix</th>
-                <td>{{ evenement.prix }}</td>
-            </tr>
-            <tr>
-                <th>DateEvenement</th>
-                <td>{{ evenement.dateEvenement ? evenement.dateEvenement|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
+	<table class="table">
+		<tbody>
+			<tr>
+				<th>Id</th>
+				<td>{{ evenement.id }}</td>
+			</tr>
+			<tr>
+				<th>Titre</th>
+				<td>{{ evenement.titre }}</td>
+			</tr>
+			<tr>
+				<th>Image</th>
+				<td>
+					{% if evenement.image == null %}
+						<img src="{{ asset('dossierIamge/evenement.gif') }}" alt="Slide 2">
+					{% else %}
+						<img src="{{asset('/dossierIamge/' ~ evenement.image)}}" alt="{{ evenement.titre }}" style="width: 20%;">
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<th>Lieu</th>
+				<td>{{ evenement.lieu }}</td>
+			</tr>
+			<tr>
+				<th>Description</th>
+				<td>{{ evenement.description }}</td>
+			</tr>
+			<tr>
+				<th>Prix</th>
+				<td>{{ evenement.prix }}</td>
+			</tr>
+			<tr>
+				<th>DateEvenement</th>
+				<td>{{ evenement.dateEvenement ? evenement.dateEvenement|date('Y-m-d H:i:s') : '' }}</td>
+			</tr>
+		</tbody>
+	</table>
 
-    <a href="{{ path('app_evenement_index') }}">back to list</a>
+	<a href="{{ path('app_evenement_index') }}">back to list</a>
 
-    <a href="{{ path('app_evenement_edit', {'id': evenement.id}) }}">edit</a>
+	<a href="{{ path('app_evenement_edit', {'id': evenement.id}) }}">edit</a>
 
-    {{ include('evenement/_delete_form.html.twig') }}
+	{{ include('evenement/_delete_form.html.twig') }}
 {% endblock %}
