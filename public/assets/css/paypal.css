@@ -1,14 +1,53 @@
-.taille{
-    width: 100%;
-    min-height: 8vh;  
-    margin: 10% auto;
+@media only screen and (max-width: 768px) {
+    .taille {
+        width: 100%;
+        min-height: 10vh;
+        margin: 10% auto;
+    }
+
+    #paypal-button-container {
+        margin: 1rem auto;
+        width: 20%;
+    }
+
+    .vite {
+        width: 60%;
+    }
 }
 
-#paypal-button-container{
-    margin: 1rem auto;
-    width: 20%;   
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .taille {
+        width: 100%;
+        min-height: 8vh;
+        margin: 10% auto;
+    }
+
+    #paypal-button-container {
+        margin: 1rem auto;
+        width: 20%;
+    }
+
+    .vite {
+        width: 60%;
+    }
 }
 
-.vite{
-    width: 60%;
+@media only screen and (min-width: 1025px) {
+
+    .taille {
+        width: 100%;
+        min-height: 8vh;
+        margin: 10% auto;
+    }
+
+    #paypal-button-container {
+        margin: 1rem auto;
+        width: 20%;
+    }
+
+    .vite {
+        width: 60%;
+    }
+
 }

@@ -1,366 +1,1110 @@
-* {
-  /* font-size: 1rem !important; */
-  /* font-family: 'Gamja Flower', sans-serif; */
-  /* font-family: 'Pacifico', cursive; */
-  font-family: 'Protest Riot', sans-serif;
-  text-decoration: none !important;
-  list-style: none;
-  scroll-behavior: smooth;
+@media only screen and (max-width: 768px) {
+  * {
+    /* font-size: 1rem !important; */
+    /* font-family: 'Gamja Flower', sans-serif; */
+    /* font-family: 'Pacifico', cursive; */
+    font-family: 'Protest Riot', sans-serif;
+    text-decoration: none !important;
+    list-style: none;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* background-image: url(../img/morgane-bru-carte-copie.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+  }
+
+  footer {
+    height: 15vh;
+    width: 100%;
+    background-color: slategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* bottom: 0; */
+    /* position: fixed; */
+  }
+
+  .superconteneur {
+    background-color: rgb(245, 250, 253);
+    justify-content: center;
+    /* height: 80vh; */
+    padding: 10% 0 10% 0;
+  }
+
+  .conteneur {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    /* margin: 0; */
+
+    justify-content: center;
+  }
+
+  .pagination {
+    justify-content: center;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    letter-spacing: 0.1vw;
+  }
+
+  .event {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Zone histoire */
+  .story {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+
+  }
+
+  .story h2,
+  .story h4 {
+    color: #ccccff;
+    text-shadow: 2px 2px 2px #000;
+    text-align: center;
+    margin-top: 2%;
+  }
+
+  .stitle {
+    font-size: 2rem;
+    margin-bottom: 3%;
+  }
+
+  .incipit {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ecriture {
+    width: 100%;
+    font-size: small;
+    margin: 0;
+    padding: 0;
+  }
+
+  .incipit p {
+    width: 80%;
+  }
+
+  .imgIncipit {
+    width: 65%;
+  }
+
+  .imgIncipit img {
+    width: 100%;
+  }
+
+  .potter {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+  }
+
+  .ecriture,
+  .textPotter,
+  .textValley,
+  .textExplo {
+    text-align: justify;
+  }
+
+  .textPotter {
+    width: 100%;
+  }
+
+  .imgPotter {
+    margin-right: 5%;
+    width: 100%;
+  }
+
+  .imgPotter img {
+    width: 100%;
+  }
+
+  .queryvalley {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 5%;
+  }
+
+  .textValley {
+    width: 100%;
+  }
+
+  .imgValley {
+    width: 100%;
+  }
+
+  .valley {
+    width: 100%;
+  }
+
+  .titreValley {
+    text-align: right;
+  }
+
+  .explo {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+  }
+
+  .textExplo {
+    width: 100%;
+  }
+
+  .imgExplo {
+    width: 100%;
+    margin-right: 5%;
+  }
+
+  .rateur {
+    width: 100%;
+  }
+
+  /* Fin zone histoire */
+
+  /* Zone Edit Profil */
+
+  .bigEdit {
+    background-image: url(../img/quenti10.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  }
+
+  .contactEdit {
+    display: flex;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  .contactEditPrenom {
+    position: relative;
+    left: 12px;
+  }
+
+  .contactEdit label {
+    padding-right: 2%;
+  }
+
+  /* Fin Edit */
+
+  /* Zone inscription */
+
+  .bigInscr {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/ruins-10.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .registerBtn {
+    position: relative;
+    left: 110px;
+    color: white;
+  }
+
+  .registerMdp {
+    position: relative;
+    right: 42px;
+  }
+
+  /* Fin Zone inscription */
+
+
+  /* Zone Contactez-nous */
+
+  .bigContiendre {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/morgane-bru-carte-copie.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contiendre {
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .annonce {
+    position: relative;
+    top: -125px;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  .contactNom {
+    width: 200%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  .contactNom label {
+    padding-right: 2%;
+  }
+
+  .contactNomnon {
+    position: relative;
+    left: 24px;
+  }
+
+  .contactMail {
+    position: relative;
+    left: 16px;
+  }
+
+  .contactQuestion {
+    position: relative;
+    left: -10px;
+  }
+
+  .contactQuestion label {
+    position: relative;
+    top: -20px;
+  }
+
+  .contactBtn {
+    position: relative;
+    left: 110px;
+  }
+
+  /* Fin Zone Contactez-nous */
+
+  /* Zone New Event */
+
+  .bigContiendreEvent {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/FTNmoSKXEAUnSyv.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .eventForm {
+    width: 120%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+    font-size: larger;
+  }
+
+  .annonceEvent {
+    position: relative;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  #evenement_titre {
+    width: 65%;
+    text-align: center;
+  }
+
+  #evenement_lieu {
+    width: 66%;
+    text-align: center;
+  }
+
+  .eventForm label {
+    padding-right: 2%;
+  }
+
+  .eventDesc label {
+    position: relative;
+    top: -25px;
+  }
+
+  #evenement_description {
+    width: 54%;
+    text-align: center;
+  }
+
+  #evenement_prix {
+    width: 66%;
+    text-align: center;
+  }
+
+  .eventDate {
+    display: flex;
+    margin-left: 8%;
+  }
+
+  #evenement_dateEvenement {
+    padding-right: 100px;
+  }
+
+  /* Fin New Event */
+
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    margin: 2.5%;
+    text-align: center;
+    font-family: arial;
+    height: 50vh;
+  }
+
+  .card button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+
+  /*    *******************************CSS S ********************** */
+  /* .navba0 .navba .margeCompte{
+      margin-left: 17rem !important;
+  }
+  
+  @media screen and (max-width: 800px) {
+  .navba0 .navba .margeCompte {
+          margin-left: 0rem !important;
+      }
+  } */
+  .taille {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .opac {
+    position: relative;
+    opacity: 0.9;
+    background-color: #000;
+  }
+
+  /* .opac{
+      position: absolute;
+      top:72.5px;
+      left: 0; 
+      z-index: 11111;   
+      opacity: 0.6
+      ;
+      width: 100%;
+      height: 117vh;
+      background-color: #000;
+  } */
+  h1.acroche {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: none;
+    /* background-color: #4a3b3b44; */
+    font-weight: 900 !important;
+    font-size: 1.5rem !important;
+    transform: translate(-50%, -50%);
+    z-index: 1111111111111111111;
+    /* color: rgb(243, 167, 3);
+  text-shadow: -11px -9px 10px #CEBF4E; */
+    /* -webkit-box-shadow: -16px -16px 17px -4px rgba(0, 0, 0, 0.76);
+      box-shadow: -16px -16px 17px -4px rgba(0, 0, 0, 0.76);
+  */
+
+    color: #0f0f01;
+
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #445341, 0 0 30px #32452d, 0 0 40px #344030, 0 0 55px #2a3827, 0 0 75px #202b1d;
+  }
+
+  /* .espaceSou{
+    padding: 10% 0 0 10%;
+  } */
+
+  .offreztheatre {
+    padding: 10%;
+
+    text-align: center;
+    font-weight: 900;
+    background-color: #765d5d54;
+    width: 100%;
+
+  }
+
+  .offreztheatre .offre {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .offreztheatre .offre .cardoffre {
+    display: block;
+    width: 30%;
+    border: 1px solid rgb(177, 171, 171);
+    box-shadow: -20px -17px 24px 5px rgba(0, 0, 0, 0.1);
+    transform: rotate(10deg);
+  }
+
+
+  .umap {
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lieu {
+    width: 40%;
+
+  }
+
+  .map {
+
+    width: 55%;
+  }
+
+  footer .rgpd,
+  footer .adresse,
+  footer .reseau {
+    width: 33%;
+    text-align: center;
+  }
+
+  footer .rgpd a,
+  footer .adresse a,
+  footer .reseau a i {
+    font-size: 1.2em !important;
+
+  }
+
+  .reseau ul {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
+
+
+
+
+
+  /* ********************************FIN************************** */
+
+  /* savoir plus evenement */
+
+  .card .carteevenemet {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #3363ff;
+    background-color: #e6ecff;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  /*  v2 card    la partie evenements  */
+  .testevenementmodele {
+    text-align: center;
+    /* padding: 30px; */
+    background: #f8f4f2;
+    font-family: Arial;
+    width: 100%;
+    margin: 0;
+
+
+  }
+
+  .conten {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+
+  }
+
+  .a-box {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+
+  }
+
+  .img-container {
+    height: 230px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+    display: inline-block;
+  }
+
+  .img-container img {
+    transform: skew(0deg, -13deg);
+    height: 250px;
+    margin: -35px 0px 0px -70px;
+  }
+
+  .inner-skew {
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0px;
+    transform: skew(0deg, 13deg);
+    font-size: 0px;
+    margin: 30px 0px 0px 0px;
+    background: #c8c2c2;
+    height: 250px;
+    width: 200px;
+  }
+
+  .text-container {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 120px 20px 20px 20px;
+    border-radius: 20px;
+    background: #fff;
+    margin: -120px 0px 0px 0px;
+    line-height: 19px;
+    font-size: 14px;
+    height: 50vh;
+  }
+
+  .text-container h3 {
+    margin: 20px 0px 10px 0px;
+    color: #041e28;
+    font-size: 18px;
+  }
+
+  .action {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .ensavoir {
+
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: rgba(241, 241, 8, 0.493);
+    padding: 5px;
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .reserver {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: rgba(241, 241, 8, 0.493);
+    padding: 18px;
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .ensavoir a,
+  .reserver a {
+    text-decoration: none;
+    color: white;
+
+  }
+
+  .reserver {
+    background: #A9BBA2;
+  }
+
+
+  /* retour en haut */
+
+
+
+  /*  v2 card    la partie evenements  fin */
+
+  .retourh i {
+    position: fixed;
+
+    bottom: 20px;
+    right: 40px;
+
+    font-size: 4rem;
+
+    background-color: #032d342a;
+    /* Couleur de fond du cercle */
+    border-radius: 50%;
+
+    color: rgb(67, 101, 156);
+  }
 }
 
-body {
-  /* background-image: url(../img/morgane-bru-carte-copie.jpg); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-
-}
-
-footer {
-  height: 15vh;
-  width: 100%;
-  background-color: slategrey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* bottom: 0; */
-  /* position: fixed; */
-}
-
-.superconteneur {
-  background-color: rgb(245, 250, 253);
-  justify-content: center;
-  /* height: 80vh; */
-  padding: 10% 0 10% 0;
-}
-
-.conteneur {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  /* margin: 0; */
-
-  justify-content: center;
-}
-
-.pagination {
-  justify-content: center;
-  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-  letter-spacing: 0.1vw;
-}
-
-.event {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Zone histoire */
-.story {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5%;
-
-}
-
-.story h2, .story h4{
-  color: #ccccff;
-  text-shadow: 2px 2px 2px #000;
-}
-
-.stitle {
-  font-size: 2rem;
-  margin-bottom: 3%;
-}
-
-.incipit {
-  display: flex;
-  flex-direction: row;
-  margin: 5%;
-}
-
-.ecriture{
-  width: 100%;
-}
-
-.incipit p {
-  width: 60%;
-}
-
-.imgIncipit{
-  width: 45%;
-}
-
-.imgIncipit img {
-  width: 100%;
-}
-
-.potter {
-  display: flex;
-  flex-direction: row;
-  margin: 5%;
-}
-
-.ecriture , .textPotter , .textValley, .textExplo{
-  text-align: justify;
-}
-
-.imgPotter {
-  margin-right: 5%;
-}
-
-.queryvalley {
-  display: flex;
-  flex-direction: row;
-  margin: 5%;
-}
-
-.textValley{
-  width: 60%;
-}
-
-.imgValley {
-  margin-left: 5%;
-  width: 100%;
-}
-
-.valley{
-  width: 100%;
-}
-
-.titreValley {
-  text-align: right;
-}
-
-.explo {
-  display: flex;
-  flex-direction: row;
-  margin: 5%;
-}
-
-.textExplo{
-  width: 65%;
-}
-
-.imgExplo {
-  width: 100%;
-  margin-right: 5%;
-}
-
-.rateur{
-  width: 100%;
-}
-
-/* Fin zone histoire */
-
-/* Zone inscription */
-
-.bigInscr{
-  width: 100%;
-  height: 75vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../img/ruins-10.jpg);
-  background-position: center;
-  background-size: 106%;
-}
-
-.registerBtn {
-  position: relative;
-  left: 110px;
-  color: white;
-}
-
-.registerMdp{
-  position: relative;
-  right: 42px;
-}
-
-/* Fin Zone inscription */
-
-
-/* Zone Contactez-nous */
-
-.bigContiendre {
-  width: 100%;
-  height: 75vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../img/morgane-bru-carte-copie.jpg);
-  background-position: center;
-  background-size: 106%;
-}
-
-.contiendre {
-  width: 40%;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.annonce {
-  position: relative;
-  top: -125px;
-  color: white;
-  text-shadow: 3px 3px 3px #000;
-}
-
-.contactNom {
-  width: 200%;
-  padding-bottom: 5%;
-  padding-top: 5%;
-  color: white;
-  text-shadow: 3px 3px 3px #000;
-}
-
-.contactNom label {
-  padding-right: 2%;
-}
-
-.contactNomnon {
-  position: relative;
-  left: 24px;
-}
-
-.contactMail {
-  position: relative;
-  left: 16px;
-}
-
-.contactQuestion {
-  position: relative;
-  left: -10px;
-}
-
-.contactQuestion label {
-  position: relative;
-  top: -20px;
-}
-
-.contactBtn {
-  position: relative;
-  left: 110px;
-}
-
-/* Fin Zone Contactez-nous */
-
-/* Zone New Event */
-
-.bigContiendreEvent {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../img/FTNmoSKXEAUnSyv.jpg);
-  background-position: center;
-  background-size: 100%;
-}
-
-.eventForm {
-  width: 200%;
-  padding-bottom: 5%;
-  padding-top: 5%;
-  color: white;
-  text-shadow: 3px 3px 3px #000;
-  font-size: larger;
-}
-
-.annonceEvent {
-  position: relative;
-  color: white;
-  text-shadow: 3px 3px 3px #000;
-}
-
-#evenement_titre{
-  width: 43.2%;
-  text-align: center;
-}
-
-#evenement_lieu{
-  width: 43.8%;
-  text-align: center;
-}
-
-.eventForm label {
-  padding-right: 2%;
-}
-
-.eventDesc label{
-  position: relative;
-  top: -25px;
-}
-
-#evenement_description{
-  width: 37.5%;
-  text-align: center;
-}
-
-#evenement_prix{
-  width: 44%;
-  text-align: center;
-}
-
-.eventDate{
-  display: flex;
-  margin-left: 8%;
-}
-
-#evenement_dateEvenement{
-  padding-right: 150px;
-}
-
-/* Fin New Event */
-
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 250px;
-  margin: 2.5%;
-  text-align: center;
-  font-family: arial;
-  height: 50vh;
-}
-
-.card button {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.price {
-  color: grey;
-  font-size: 22px;
-}
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-}
-
-
-/*    *******************************CSS SOUHILA ********************** */
-/* .navba0 .navba .margeCompte{
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+  * {
+    /* font-size: 1rem !important; */
+    /* font-family: 'Gamja Flower', sans-serif; */
+    /* font-family: 'Pacifico', cursive; */
+    font-family: 'Protest Riot', sans-serif;
+    text-decoration: none !important;
+    list-style: none;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* background-image: url(../img/morgane-bru-carte-copie.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+  }
+
+  footer {
+    height: 15vh;
+    width: 100%;
+    background-color: slategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* bottom: 0; */
+    /* position: fixed; */
+  }
+
+  .superconteneur {
+    background-color: rgb(245, 250, 253);
+    justify-content: center;
+    /* height: 80vh; */
+    padding: 10% 0 10% 0;
+  }
+
+  .conteneur {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    /* margin: 0; */
+
+    justify-content: center;
+  }
+
+  .pagination {
+    justify-content: center;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    letter-spacing: 0.1vw;
+  }
+
+  .event {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Zone histoire */
+  .story {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+
+  }
+
+  .story h2,
+  .story h4 {
+    color: #ccccff;
+    text-shadow: 2px 2px 2px #000;
+    text-align: center;
+    margin-top: 2%;
+  }
+
+  .stitle {
+    font-size: 2rem;
+    margin-bottom: 3%;
+  }
+
+  .incipit {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ecriture {
+    width: 100%;
+    font-size: small;
+    margin: 0;
+    padding: 0;
+  }
+
+  .incipit p {
+    width: 80%;
+  }
+
+  .imgIncipit {
+    width: 65%;
+  }
+
+  .imgIncipit img {
+    width: 100%;
+  }
+
+  .potter {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+  }
+
+  .ecriture,
+  .textPotter,
+  .textValley,
+  .textExplo {
+    text-align: justify;
+  }
+
+  .textPotter {
+    width: 100%;
+  }
+
+  .imgPotter {
+    margin-right: 5%;
+    width: 100%;
+  }
+
+  .imgPotter img {
+    width: 100%;
+  }
+
+  .queryvalley {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 5%;
+  }
+
+  .textValley {
+    width: 100%;
+  }
+
+  .imgValley {
+    width: 100%;
+  }
+
+  .valley {
+    width: 100%;
+  }
+
+  .titreValley {
+    text-align: right;
+  }
+
+  .explo {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+  }
+
+  .textExplo {
+    width: 100%;
+  }
+
+  .imgExplo {
+    width: 100%;
+    margin-right: 5%;
+  }
+
+  .rateur {
+    width: 100%;
+  }
+
+  /* Fin zone histoire */
+
+  /* Zone Edit Profil */
+
+  .bigEdit {
+    background-image: url(../img/quenti10.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  }
+
+  .contactEdit {
+    display: flex;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  .contactEditPrenom {
+    position: relative;
+    left: 12px;
+  }
+
+  .contactEdit label {
+    padding-right: 2%;
+  }
+
+  /* Fin Edit */
+
+  /* Zone inscription */
+
+  .bigInscr {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/ruins-10.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .registerBtn {
+    position: relative;
+    left: 110px;
+    color: white;
+  }
+
+  .registerMdp {
+    position: relative;
+    right: 42px;
+  }
+
+  /* Fin Zone inscription */
+
+
+  /* Zone Contactez-nous */
+
+  .bigContiendre {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/morgane-bru-carte-copie.jpg);
+    background-position: center;
+    background-size: 106%;
+  }
+
+  .contiendre {
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .annonce {
+    position: relative;
+    top: -125px;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  .contactNom {
+    width: 200%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  .contactNom label {
+    padding-right: 2%;
+  }
+
+  .contactNomnon {
+    position: relative;
+    left: 24px;
+  }
+
+  .contactMail {
+    position: relative;
+    left: 16px;
+  }
+
+  .contactQuestion {
+    position: relative;
+    left: -10px;
+  }
+
+  .contactQuestion label {
+    position: relative;
+    top: -20px;
+  }
+
+  .contactBtn {
+    position: relative;
+    left: 110px;
+  }
+
+  /* Fin Zone Contactez-nous */
+
+  /* Zone New Event */
+
+  .bigContiendreEvent {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/FTNmoSKXEAUnSyv.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .eventForm {
+    width: 140%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+    font-size: larger;
+  }
+
+  .annonceEvent {
+    position: relative;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  #evenement_titre {
+    width: 46%;
+    text-align: center;
+  }
+
+  #evenement_lieu {
+    width: 47%;
+    text-align: center;
+  }
+
+  .eventForm label {
+    padding-right: 2%;
+  }
+
+  .eventDesc label {
+    position: relative;
+    top: -25px;
+  }
+
+  #evenement_description {
+    width: 37.5%;
+    text-align: center;
+  }
+
+  #evenement_prix {
+    width: 47%;
+    text-align: center;
+  }
+
+  .eventDate {
+    display: flex;
+    margin-left: 8%;
+  }
+
+  #evenement_dateEvenement {
+    padding-right: 50px;
+  }
+
+  /* Fin New Event */
+
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    margin: 2.5%;
+    text-align: center;
+    font-family: arial;
+    height: 50vh;
+  }
+
+  .card button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+
+  /*    *******************************CSS S ********************** */
+  /* .navba0 .navba .margeCompte{
     margin-left: 17rem !important;
 }
 
@@ -369,18 +1113,18 @@ footer {
         margin-left: 0rem !important;
     }
 } */
-.taille {
-  width: 100%;
-  height: 100vh;
-}
+  .taille {
+    width: 100%;
+    height: 100vh;
+  }
 
-.opac {
-  position: relative;
-  opacity: 0.9;
-  background-color: #000;
-}
+  .opac {
+    position: relative;
+    opacity: 0.9;
+    background-color: #000;
+  }
 
-/* .opac{
+  /* .opac{
     position: absolute;
     top:72.5px;
     left: 0; 
@@ -391,234 +1135,912 @@ footer {
     height: 117vh;
     background-color: #000;
 } */
-h1.acroche {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: none;
-  /* background-color: #4a3b3b44; */
-  font-weight: 900 !important;
-  font-size: 1.5rem !important;
-  transform: translate(-50%, -50%);
-  z-index: 1111111111111111111;
-  /* color: rgb(243, 167, 3);
+  h1.acroche {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: none;
+    /* background-color: #4a3b3b44; */
+    font-weight: 900 !important;
+    font-size: 1.5rem !important;
+    transform: translate(-50%, -50%);
+    z-index: 1111111111111111111;
+    /* color: rgb(243, 167, 3);
 text-shadow: -11px -9px 10px #CEBF4E; */
-  /* -webkit-box-shadow: -16px -16px 17px -4px rgba(0, 0, 0, 0.76);
+    /* -webkit-box-shadow: -16px -16px 17px -4px rgba(0, 0, 0, 0.76);
     box-shadow: -16px -16px 17px -4px rgba(0, 0, 0, 0.76);
 */
 
-  color: #0f0f01;
+    color: #0f0f01;
 
-  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #445341, 0 0 30px #32452d, 0 0 40px #344030, 0 0 55px #2a3827, 0 0 75px #202b1d;
-}
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #445341, 0 0 30px #32452d, 0 0 40px #344030, 0 0 55px #2a3827, 0 0 75px #202b1d;
+  }
 
-/* .espaceSou{
+  /* .espaceSou{
   padding: 10% 0 0 10%;
 } */
 
-.offreztheatre {
-  padding: 10%;
+  .offreztheatre {
+    padding: 10%;
 
-  text-align: center;
-  font-weight: 900;
-  background-color: #765d5d54;
-  width: 100%;
+    text-align: center;
+    font-weight: 900;
+    background-color: #765d5d54;
+    width: 100%;
+
+  }
+
+  .offreztheatre .offre {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .offreztheatre .offre .cardoffre {
+    display: block;
+    width: 30%;
+    border: 1px solid rgb(177, 171, 171);
+    box-shadow: -20px -17px 24px 5px rgba(0, 0, 0, 0.1);
+    transform: rotate(10deg);
+  }
+
+
+  .umap {
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lieu {
+    width: 40%;
+
+  }
+
+  .map {
+
+    width: 55%;
+  }
+
+  footer .rgpd,
+  footer .adresse,
+  footer .reseau {
+    width: 33%;
+    text-align: center;
+  }
+
+  footer .rgpd a,
+  footer .adresse a,
+  footer .reseau a i {
+    font-size: 1.5em !important;
+
+  }
+
+  .reseau ul {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
+
+
+
+
+
+  /* ********************************FIN************************** */
+
+  /* savoir plus evenement */
+
+  .card .carteevenemet {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #3363ff;
+    background-color: #e6ecff;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  /*  v2 card    la partie evenements  */
+  .testevenementmodele {
+    text-align: center;
+    /* padding: 30px; */
+    background: #f8f4f2;
+    font-family: Arial;
+    width: 100%;
+    margin: 0;
+
+
+  }
+
+  .conten {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+
+  }
+
+  .a-box {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+
+  }
+
+  .img-container {
+    height: 230px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+    display: inline-block;
+  }
+
+  .img-container img {
+    transform: skew(0deg, -13deg);
+    height: 250px;
+    margin: -35px 0px 0px -70px;
+  }
+
+  .inner-skew {
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0px;
+    transform: skew(0deg, 13deg);
+    font-size: 0px;
+    margin: 30px 0px 0px 0px;
+    background: #c8c2c2;
+    height: 250px;
+    width: 200px;
+  }
+
+  .text-container {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 120px 20px 20px 20px;
+    border-radius: 20px;
+    background: #fff;
+    margin: -120px 0px 0px 0px;
+    line-height: 19px;
+    font-size: 14px;
+    height: 50vh;
+  }
+
+  .text-container h3 {
+    margin: 20px 0px 10px 0px;
+    color: #041e28;
+    font-size: 18px;
+  }
+
+  .action {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .ensavoir {
+
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: rgba(241, 241, 8, 0.493);
+    padding: 5px;
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .reserver {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: rgba(241, 241, 8, 0.493);
+    padding: 18px;
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .ensavoir a,
+  .reserver a {
+    text-decoration: none;
+    color: white;
+
+  }
+
+  .reserver {
+    background: #A9BBA2;
+  }
+
+
+  /* retour en haut */
+
+
+
+  /*  v2 card    la partie evenements  fin */
+
+  .retourh i {
+    position: fixed;
+
+    bottom: 20px;
+    right: 40px;
+
+    font-size: 4rem;
+
+    background-color: #032d342a;
+    /* Couleur de fond du cercle */
+    border-radius: 50%;
+
+    color: rgb(67, 101, 156);
+  }
 
 }
 
-.offreztheatre .offre {
-  width: 100%;
 
-  display: flex;
-  justify-content: space-between;
+@media only screen and (min-width: 1025px) {
+
+  * {
+    /* font-size: 1rem !important; */
+    /* font-family: 'Gamja Flower', sans-serif; */
+    /* font-family: 'Pacifico', cursive; */
+    font-family: 'Protest Riot', sans-serif;
+    text-decoration: none !important;
+    list-style: none;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* background-image: url(../img/morgane-bru-carte-copie.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+  }
+
+  footer {
+    height: 15vh;
+    width: 100%;
+    background-color: slategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* bottom: 0; */
+    /* position: fixed; */
+  }
+
+  .superconteneur {
+    background-color: rgb(245, 250, 253);
+    justify-content: center;
+    /* height: 80vh; */
+    padding: 10% 0 10% 0;
+  }
+
+  .conteneur {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    /* margin: 0; */
+
+    justify-content: center;
+  }
+
+  .pagination {
+    justify-content: center;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    letter-spacing: 0.1vw;
+  }
+
+  .event {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Zone histoire */
+  .story {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+
+  }
+
+  .story h2,
+  .story h4 {
+    color: #ccccff;
+    text-shadow: 2px 2px 2px #000;
+  }
+
+  .stitle {
+    font-size: 2rem;
+    margin-bottom: 3%;
+  }
+
+  .incipit {
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+  }
+
+  .ecriture {
+    width: 100%;
+  }
+
+  .incipit p {
+    width: 60%;
+  }
+
+  .imgIncipit {
+    width: 45%;
+  }
+
+  .imgIncipit img {
+    width: 100%;
+  }
+
+  .potter {
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+  }
+
+  .ecriture,
+  .textPotter,
+  .textValley,
+  .textExplo {
+    text-align: justify;
+  }
+
+  .imgPotter {
+    margin-right: 5%;
+  }
+
+  .queryvalley {
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+  }
+
+  .textValley {
+    width: 60%;
+  }
+
+  .imgValley {
+    margin-left: 5%;
+    width: 100%;
+  }
+
+  .valley {
+    width: 100%;
+  }
+
+  .titreValley {
+    text-align: right;
+  }
+
+  .explo {
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+  }
+
+  .textExplo {
+    width: 65%;
+  }
+
+  .imgExplo {
+    width: 100%;
+    margin-right: 5%;
+  }
+
+  .rateur {
+    width: 100%;
+  }
+
+  /* Fin zone histoire */
+
+  /* Zone Edit Profil */
+
+  .bigEdit {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/quenti10.jpg);
+    background-position: center;
+    background-size: 100%;
+  }
+
+  .contactEdit {
+    display: flex;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  .contactEditPrenom {
+    position: relative;
+    left: 12px;
+  }
+
+  .contactEdit label {
+    padding-right: 2%;
+  }
+
+  /* Fin Edit */
+
+  /* Zone inscription */
+
+  .bigInscr {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/ruins-10.jpg);
+    background-position: center;
+    background-size: 106%;
+  }
+
+  .registerBtn {
+    position: relative;
+    left: 110px;
+    color: white;
+  }
+
+  .registerMdp {
+    position: relative;
+    right: 42px;
+  }
+
+  /* Fin Zone inscription */
+
+
+  /* Zone Contactez-nous */
+
+  .bigContiendre {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/morgane-bru-carte-copie.jpg);
+    background-position: center;
+    background-size: 106%;
+  }
+
+  .contiendre {
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .annonce {
+    position: relative;
+    top: -125px;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  .contactNom {
+    width: 200%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  .contactNom label {
+    padding-right: 2%;
+  }
+
+  .contactNomnon {
+    position: relative;
+    left: 24px;
+  }
+
+  .contactMail {
+    position: relative;
+    left: 16px;
+  }
+
+  .contactQuestion {
+    position: relative;
+    left: -10px;
+  }
+
+  .contactQuestion label {
+    position: relative;
+    top: -20px;
+  }
+
+  .contactBtn {
+    position: relative;
+    left: 110px;
+  }
+
+  /* Fin Zone Contactez-nous */
+
+  /* Zone New Event */
+
+  .bigContiendreEvent {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/FTNmoSKXEAUnSyv.jpg);
+    background-position: center;
+    background-size: 100%;
+  }
+
+  .eventForm {
+    width: 200%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+    font-size: larger;
+  }
+
+  .annonceEvent {
+    position: relative;
+    color: white;
+    text-shadow: 3px 3px 3px #000;
+  }
+
+  #evenement_titre {
+    width: 43.2%;
+    text-align: center;
+  }
+
+  #evenement_lieu {
+    width: 43.8%;
+    text-align: center;
+  }
+
+  .eventForm label {
+    padding-right: 2%;
+  }
+
+  .eventDesc label {
+    position: relative;
+    top: -25px;
+  }
+
+  #evenement_description {
+    width: 37.5%;
+    text-align: center;
+  }
+
+  #evenement_prix {
+    width: 44%;
+    text-align: center;
+  }
+
+  .eventDate {
+    display: flex;
+    margin-left: 8%;
+  }
+
+  #evenement_dateEvenement {
+    padding-right: 150px;
+  }
+
+  /* Fin New Event */
+
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    margin: 2.5%;
+    text-align: center;
+    font-family: arial;
+    height: 50vh;
+  }
+
+  .card button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+
+  /*    *******************************CSS S ********************** */
+  /* .navba0 .navba .margeCompte{
+    margin-left: 17rem !important;
 }
 
-.offreztheatre .offre .cardoffre {
-  display: block;
-  width: 30%;
-  border: 1px solid rgb(177, 171, 171);
-  box-shadow: -20px -17px 24px 5px rgba(0, 0, 0, 0.1);
-  transform: rotate(10deg);
-}
+@media screen and (max-width: 800px) {
+.navba0 .navba .margeCompte {
+        margin-left: 0rem !important;
+    }
+} */
+  .taille {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .opac {
+    position: relative;
+    opacity: 0.9;
+    background-color: #000;
+  }
+
+  /* .opac{
+    position: absolute;
+    top:72.5px;
+    left: 0; 
+    z-index: 11111;   
+    opacity: 0.6
+    ;
+    width: 100%;
+    height: 117vh;
+    background-color: #000;
+} */
+  h1.acroche {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: none;
+    /* background-color: #4a3b3b44; */
+    font-weight: 900 !important;
+    font-size: 1.5rem !important;
+    transform: translate(-50%, -50%);
+    z-index: 1111111111111111111;
+    /* color: rgb(243, 167, 3);
+text-shadow: -11px -9px 10px #CEBF4E; */
+    /* -webkit-box-shadow: -16px -16px 17px -4px rgba(0, 0, 0, 0.76);
+    box-shadow: -16px -16px 17px -4px rgba(0, 0, 0, 0.76);
+*/
+
+    color: #0f0f01;
+
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #445341, 0 0 30px #32452d, 0 0 40px #344030, 0 0 55px #2a3827, 0 0 75px #202b1d;
+  }
+
+  /* .espaceSou{
+  padding: 10% 0 0 10%;
+} */
+
+  .offreztheatre {
+    padding: 10%;
+
+    text-align: center;
+    font-weight: 900;
+    background-color: #765d5d54;
+    width: 100%;
+
+  }
+
+  .offreztheatre .offre {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .offreztheatre .offre .cardoffre {
+    display: block;
+    width: 30%;
+    border: 1px solid rgb(177, 171, 171);
+    box-shadow: -20px -17px 24px 5px rgba(0, 0, 0, 0.1);
+    transform: rotate(10deg);
+  }
 
 
-.umap {
-  width: 100%;
-  padding: 5%;
-  display: flex;
-  justify-content: space-between;
-}
+  .umap {
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
 
-.lieu {
-  width: 40%;
+  .lieu {
+    width: 40%;
 
-}
+  }
 
-.map {
+  .map {
 
-  width: 40%;
-}
+    width: 40%;
+  }
 
-footer .rgpd,
-footer .adresse,
-footer .reseau {
-  width: 33%;
-  text-align: center;
-}
+  footer .rgpd,
+  footer .adresse,
+  footer .reseau {
+    width: 33%;
+    text-align: center;
+  }
 
-footer .rgpd a,
-footer .adresse a,
-footer .reseau a i {
-  font-size: 1.5em !important;
+  footer .rgpd a,
+  footer .adresse a,
+  footer .reseau a i {
+    font-size: 1.5em !important;
 
-}
+  }
 
-.reseau ul {
-  display: flex;
-  justify-content: space-around;
-  width: 30%;
-}
-
-
-
-
-
-/* ********************************FIN************************** */
-
-/* souhila savoir plus evenement */
-
-.card .carteevenemet {
-  display: block;
-  width: 100%;
-  padding: 1.5rem;
-  font-size: 2rem;
-  text-align: center;
-  color: #3363ff;
-  background-color: #e6ecff;
-  border: none;
-  border-radius: 0.4rem;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-/* souhila  v2 card    la partie evenements  */
-.testevenementmodele {
-  text-align: center;
-  /* padding: 30px; */
-  background: #f8f4f2;
-  font-family: Arial;
-  width: 100%;
-  margin: 0;
-
-
-}
-
-.conten {
-  display: flex;
-  justify-content: space-around;
-  box-sizing: border-box;
-  width: 100%;
-  flex-wrap: wrap;
-
-}
-
-.a-box {
-  display: inline-block;
-  width: 30%;
-  text-align: center;
-
-}
-
-.img-container {
-  height: 230px;
-  width: 200px;
-  overflow: hidden;
-  border-radius: 0px 0px 20px 20px;
-  display: inline-block;
-}
-
-.img-container img {
-  transform: skew(0deg, -13deg);
-  height: 250px;
-  margin: -35px 0px 0px -70px;
-}
-
-.inner-skew {
-  display: inline-block;
-  border-radius: 20px;
-  overflow: hidden;
-  padding: 0px;
-  transform: skew(0deg, 13deg);
-  font-size: 0px;
-  margin: 30px 0px 0px 0px;
-  background: #c8c2c2;
-  height: 250px;
-  width: 200px;
-}
-
-.text-container {
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  padding: 120px 20px 20px 20px;
-  border-radius: 20px;
-  background: #fff;
-  margin: -120px 0px 0px 0px;
-  line-height: 19px;
-  font-size: 14px;
-  height: 50vh;
-}
-
-.text-container h3 {
-  margin: 20px 0px 10px 0px;
-  color: #041e28;
-  font-size: 18px;
-}
-
-.action {
-  display: flex;
-  justify-content: space-around;
-}
-
-.ensavoir,
-.reserver {
-
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  background: rgba(241, 241, 8, 0.493);
-  padding: 5px;
-  width: 40%;
-  margin: auto;
-  margin-top: 20px;
-}
-
-.ensavoir a,
-.reserver a {
-  text-decoration: none;
-  color: white;
-
-}
-
-.reserver {
-  background: #A9BBA2;
-}
-
-
-/* retour en haut */
+  .reseau ul {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
 
 
 
-/* souhila  v2 card    la partie evenements  fin */
 
-.retourh i {
-  position: fixed;
 
-  bottom: 20px;
-  right: 40px;
+  /* ********************************FIN************************** */
 
-  font-size: 4rem;
+  /* savoir plus evenement */
 
-  background-color: #032d342a;
-  /* Couleur de fond du cercle */
-  border-radius: 50%;
+  .card .carteevenemet {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #3363ff;
+    background-color: #e6ecff;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+  }
 
-  color: rgb(67, 101, 156);
+  /*  v2 card    la partie evenements  */
+  .testevenementmodele {
+    text-align: center;
+    /* padding: 30px; */
+    background: #f8f4f2;
+    font-family: Arial;
+    width: 100%;
+    margin: 0;
+
+
+  }
+
+  .conten {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+
+  }
+
+  .a-box {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+
+  }
+
+  .img-container {
+    height: 230px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+    display: inline-block;
+  }
+
+  .img-container img {
+    transform: skew(0deg, -13deg);
+    height: 250px;
+    margin: -35px 0px 0px -70px;
+  }
+
+  .inner-skew {
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0px;
+    transform: skew(0deg, 13deg);
+    font-size: 0px;
+    margin: 30px 0px 0px 0px;
+    background: #c8c2c2;
+    height: 250px;
+    width: 200px;
+  }
+
+  .text-container {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 120px 20px 20px 20px;
+    border-radius: 20px;
+    background: #fff;
+    margin: -120px 0px 0px 0px;
+    line-height: 19px;
+    font-size: 14px;
+    height: 50vh;
+  }
+
+  .text-container h3 {
+    margin: 20px 0px 10px 0px;
+    color: #041e28;
+    font-size: 18px;
+  }
+
+  .action {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .ensavoir,
+  .reserver {
+
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: rgba(241, 241, 8, 0.493);
+    padding: 5px;
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .ensavoir a,
+  .reserver a {
+    text-decoration: none;
+    color: white;
+
+  }
+
+  .reserver {
+    background: #A9BBA2;
+  }
+
+
+  /* retour en haut */
+
+
+
+  /*  v2 card    la partie evenements  fin */
+
+  .retourh i {
+    position: fixed;
+
+    bottom: 20px;
+    right: 40px;
+
+    font-size: 4rem;
+
+    background-color: #032d342a;
+    /* Couleur de fond du cercle */
+    border-radius: 50%;
+
+    color: rgb(67, 101, 156);
+  }
+
 }

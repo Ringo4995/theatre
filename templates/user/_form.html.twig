@@ -1,6 +1,10 @@
 {{ form_start(form) }}
-<div class="eventForm">{{ form_row(form.email, {'attr': {'placeholder': 'Titre du spectacle'}}) }}</div>
-<div class="eventForm">{{ form_row(form.nom) }}</div>
-<div class="eventForm">{{ form_row(form.prenom, {'attr': {'placeholder': 'Lieu du spectacle'}}) }}</div>
-    <button class="btn">{{ button_label|default('Save') }}</button>
+<div class="bigEdit">
+	<h1 class="annonceEvent">Modifier mon profil</h1>
+	<div class="contactEdit">{{ form_row(form.email, {'attr': {'placeholder': 'Email'}}) }}</div>
+	<div class="contactEdit">{{ form_row(form.nom, {'attr': {'placeholder': 'Nom'}}) }}</div>
+	<div class="contactEdit contactEditPrenom">{{ form_row(form.prenom, {'attr': {'placeholder': 'Prenom'}}) }}</div>
+	<button class="btn" style="color: white; text-shadow: 2px 2px 2px #000;">{{ button_label|default('Enregistrer') }}</button>
+	<a href="{{ path('profil') }}">Retour au profil</a>
+</div>
 {{ form_end(form) }}
