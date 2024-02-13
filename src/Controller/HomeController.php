@@ -57,5 +57,9 @@ class HomeController extends AbstractController
         ]);
     }
 
-    
+    #[Route("construction", name:"en_construction")]
+    public function vroum(): Response
+    {
+        return $this->render('test/construction.html.twig');
+    }
 }

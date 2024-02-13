@@ -46,12 +46,13 @@
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .carteSavoir {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     margin: 8% 10%;
   }
 
   .imgSavoir {
     width: 100%;
+    margin-bottom: 5%;
   }
 
   .imgSavoir img {
